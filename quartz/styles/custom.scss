@@ -1,3 +1,215 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+
+.page-listing {
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* 页面标题样式（默认浅色模式） */
+.page-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+.page-subtitle {
+    font-size: 16px;
+    color: #6b7280;
+    margin-bottom: 32px;
+}
+
+/* 文档列表容器样式 */
+.page-listing ul.section-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* 卡片容器核心样式（默认浅色模式） */
+.page-listing .section-li {
+    display: flex;
+    /* 确保卡片占满列表项高度 */
+}
+
+.page-listing .section-li .section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    /* 减少内边距，降低整体高度 */
+    transition: all 0.3s ease;
+    flex: 1;
+    /* 占满父元素高度 */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f3f4f6;
+    min-height: 180px;
+}
+
+/* 卡片hover交互效果（默认浅色模式） */
+.page-listing .section-li .section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-color: #e5e7eb;
+}
+
+/* 发布时间样式（默认浅色模式） */
+.page-listing .meta time {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-bottom: 10px;
+    /* 减少间距 */
+    display: inline-block;
+}
+
+/* 文档标题样式（默认浅色模式，优化截断逻辑） */
+.page-listing .desc {
+    margin-bottom: 12px;
+    /* 减少间距 */
+    flex-shrink: 0;
+}
+
+.page-listing .desc h3 {
+    margin: 0 0 12px 0;
+    /* 减少间距 */
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    /* 标题最多3行，超出柔和截断 */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: auto;
+}
+
+.page-listing .desc h3 a {
+    color: #111827;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.page-listing .desc h3 a:hover {
+    color: #2563eb;
+}
+
+/* 标签列表样式（默认浅色模式） */
+.page-listing .tags {
+    list-style: none;
+    padding: 0;
+    margin: auto 0 0 0;
+    /* 靠下对齐 */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    /* 减少标签间距 */
+    max-height: 50px;
+    /* 限制最多2行标签 */
+    overflow: hidden;
+}
+
+.page-listing .tags li a {
+    font-size: 12px;
+    color: #4b5563;
+    background-color: #f3f4f6;
+    padding: 3px 10px;
+    /* 减少标签内边距 */
+    border-radius: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.page-listing .tags li a:hover {
+    background-color: #e5e7eb;
+    color: #111827;
+}
+
+/* -------------------------- 适配框架深色变量 root[saved-theme=dark] -------------------------- */
+:root[saved-theme=dark] {
+
+    /* 深色模式标题/副标题：使用框架 dark（文字色）和 darkgray（次要文字色） */
+    .page-title {
+        color: var(--dark);
+    }
+
+    .page-subtitle {
+        color: var(--darkgray);
+    }
+
+    /* 深色模式卡片：用 light（浅深色背景）、lightgray（边框），阴影增强层次 */
+    .page-listing .section-li .section {
+        background-color: var(--light);
+        border-color: var(--lightgray);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        /* 深色下阴影更明显 */
+    }
+
+    .page-listing .section-li .section:hover {
+        border-color: var(--gray);
+        /* hover时边框用 gray，加深对比 */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    /* 深色模式发布时间：用 darkgray（次要文字色），确保可读性 */
+    .page-listing .meta time {
+        color: var(--darkgray);
+    }
+
+    /* 深色模式标题链接：默认 dark（文字色），hover 用 tertiary（高亮蓝） */
+    .page-listing .desc h3 a {
+        color: var(--dark);
+    }
+
+    .page-listing .desc h3 a:hover {
+        color: var(--tertiary);
+        /* 框架 tertiary 是浅蓝色，适配主题 */
+    }
+
+    /* 深色模式标签：背景用 lightgray，文字用 dark，hover 背景用 gray */
+    .page-listing .tags li a {
+        background-color: var(--lightgray);
+        color: var(--dark);
+    }
+
+    .page-listing .tags li a:hover {
+        background-color: var(--gray);
+        color: var(--dark);
+    }
+}
+
+/* 响应式适配 */
+@media (max-width: 1024px) {
+    .page-listing ul.section-ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-listing ul.section-ul {
+        grid-template-columns: 1fr;
+    }
+
+    .page-title {
+        font-size: 24px;
+    }
+
+    .page-subtitle {
+        font-size: 14px;
+    }
+
+    .page-listing .section-li .section {
+        min-height: 250px;
+        /* 移动端降低高度 */
+    }
+
+    /* 移动端深色模式卡片高度同步 */
+    :root[saved-theme=dark] .page-listing .section-li .section {
+        min-height: 250px;
+    }
+}
