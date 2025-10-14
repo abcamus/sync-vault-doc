@@ -1,5 +1,5 @@
 ---
-title: "4. peer-to-peer实时同步"
+title: 3、点对点实时同步
 tags:
   - Obsidian同步
   - Sync Vault
@@ -10,6 +10,8 @@ tags:
 ## 使用场景
 1. 需要极致实时同步体验。
 2. 需要多人实时共享内容。
+## 体验网页版本
+请前往：[点对点同步网页版](demo.sync-vault.com)
 ## 如何操作
 当多台待同步设备位于同一局域网内时（或者通过中转服务器，公测进行中，[点击了解](https://kqiu.top/obsidian-sync-vault-livesync-beta/)），可使用peer to peer同步文件。
 > 本功能需要使用信令服务器，详见[启动信令服务器](#启动信令服务器)。
@@ -37,3 +39,6 @@ $ npm run docker:run
 在`Connection status`中显示了当前设备名字和连接的设备数量。
 <!-- ![设备已连接](/img/p2p-device-connected.png) -->
 <img src="/img/p2p-device-connected.png" alt="设备已连接" width="75%">
+
+## 未能直连的场景
+需要通过[[about-turn-server | TURN服务器]]进行中转，如何在NAS上部署可参考[[build-with-nas | 这里]]。

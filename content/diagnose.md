@@ -1,5 +1,5 @@
 ---
-title: 8. 如何排查同步问题
+title: 常见问题
 tags:
   - syncvault
   - obsidian/同步

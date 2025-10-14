@@ -1,11 +1,9 @@
 ---
-title: "7. 视频播放、修订历史和同步报告"
+title: 视频播放、修订历史和同步报告
 tags:
   - Obsidian同步
-  - Sync Vault
-  - Video Playback
-  - Revision History
-  - Sync Report
+  - videoplayback
+  - revisionhistory
 ---
 
 ## 播放云盘视频

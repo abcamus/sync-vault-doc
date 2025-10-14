@@ -1,5 +1,5 @@
 ---
-title: 如何选择Obsidian同步方案
+title: 选择合适的同步方案
 tags:
   - Obsidian同步
   - icloud
@@ -13,7 +13,7 @@ Obsidian同步可以有多种方案，用户可基于自己的现状，比如需
 2. [[sync-comparison#功能|特性对比]]。
 3. [[sync-comparison#定价|主要参数与定价]]。
 
-## 如何选择
+## 按照使用场景选择
 ### 场景一：仅苹果平台
 - 推荐：iCloud。推荐理由：设备自带，无需配置。
 - 可选：Obsidian官方、Sync Vault、Remotely Save

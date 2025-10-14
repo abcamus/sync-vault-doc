@@ -1,8 +1,7 @@
 ---
-title: "5. 同步插件、主题和隐藏文件"
+title: 同步插件、主题和隐藏文件
 tags:
   - Obsidian同步
-  - Sync Vault
   - 插件同步
   - 主题同步
 ---

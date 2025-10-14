@@ -41,7 +41,7 @@
     background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    padding: 20px;
+    padding: 10px;
     /* 减少内边距，降低整体高度 */
     transition: all 0.3s ease;
     flex: 1;
@@ -49,7 +49,7 @@
     display: flex;
     flex-direction: column;
     border: 1px solid #f3f4f6;
-    min-height: 180px;
+    min-height: 200px;
 }
 
 /* 卡片hover交互效果（默认浅色模式） */
@@ -105,7 +105,7 @@
     padding: 0;
     margin: auto 0 0 0;
     /* 靠下对齐 */
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     gap: 6px;
     /* 减少标签间距 */

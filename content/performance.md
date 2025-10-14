@@ -1,5 +1,5 @@
 ---
-title: 同步性能
+title: 性能报告
 tags:
   - obsidian/同步/性能
 date: 2025-09-02

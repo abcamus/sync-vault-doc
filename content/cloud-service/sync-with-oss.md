@@ -1,12 +1,12 @@
 ---
-title: 如何通过腾讯云COS同步
+title: 配置腾讯云COS
 date: 2025-09-08
 tags:
   - obsidiansync
   - S3
   - 腾讯云
 ---
-[Sync Vault社区版](https://github.com/abcamus/obsidian-sync-vault-ce)支持通过[腾讯云对象存储]()同步。
+[Sync Vault社区版](https://github.com/abcamus/obsidian-sync-vault-ce)支持通过腾讯云对象存储同步。
 
 ## 购买腾讯云COS对象存储
 进入[腾讯云官网](https://cloud.tencent.com/)，选购对应的对象存储套餐。

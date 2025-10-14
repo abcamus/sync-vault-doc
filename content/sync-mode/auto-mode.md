@@ -1,5 +1,5 @@
 ---
-title: "3. 自动同步"
+title: 2、自动同步模式
 tags:
   - Obsidian同步
   - Sync Vault

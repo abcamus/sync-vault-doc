@@ -1,5 +1,5 @@
 ---
-title: "2. 受控模式：手动同步文件"
+title: 1、受控模式：手动同步文件
 tags:
   - Obsidian同步
   - Sync Vault

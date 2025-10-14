@@ -1,3 +1,3 @@
 ---
-title: 开始使用Obsidian
+title: Obsidian 入门指南
 ---
