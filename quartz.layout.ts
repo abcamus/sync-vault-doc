@@ -26,7 +26,6 @@ export const sharedPageComponents: SharedLayout = {
     links: {
       GitHub: "https://github.com/abcamus/obsidian-sync-vault-ce",
       "QQ": "https://qm.qq.com/cgi-bin/qm/qr?k=1023835978",
-      "沪ICP备2024095381号-2": "https://beian.miit.gov.cn/",
     },
   }),
 }
