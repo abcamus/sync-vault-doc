@@ -5,7 +5,23 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [
+    Component.Comments({
+      provider: 'giscus',
+      options: {
+        // from data-repo
+        repo: 'abcamus/sync-vault-doc',
+        // from data-repo-id
+        repoId: 'R_kgDOQCGoDg',
+        // from data-category
+        category: 'Announcements',
+        // from data-category-id
+        categoryId: 'DIC_kwDOQCGoDs4Cwn9c',
+        // from data-lang
+        lang: 'zh-CN'
+      }
+    }),
+  ],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/abcamus/obsidian-sync-vault-ce",
