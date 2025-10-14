@@ -75,8 +75,8 @@ Obsidian同步可以有多种方案，用户可基于自己的现状，比如需
 [^5]: 标准版年付：\$4/月，月付：\$5/月
 [^6]: Plus版年付：\$8/月，月付：\$10/月
 ## 参考链接
-1. Obsidian sync, https://obsidian.md/sync/
-2. iCloud, https://www.icloud.com.cn/
-3. Syncthing, https://docs.syncthing.net/
-4. RemotelySave, https://remotelysave.com/
-5. SyncVault, https://sync-vault.com/sync-vault/
+[1] Obsidian sync, https://obsidian.md/sync/
+[2] iCloud, https://www.icloud.com.cn/
+[3] Syncthing, https://docs.syncthing.net/
+[4] RemotelySave, https://remotelysave.com/
+[5] SyncVault, https://sync-vault.com/sync-vault/
