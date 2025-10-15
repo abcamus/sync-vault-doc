@@ -17,7 +17,7 @@ const config: QuartzConfig = {
       projectId: "t0rg7gvytf"
     },
     locale: "en-US",
-    baseUrl: "sync-vault.com",
+    baseUrl: "abcamus.github.io/sync-vault-doc",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
@@ -58,7 +58,7 @@ const config: QuartzConfig = {
     transformers: [
       Plugin.FrontMatter(),
       Plugin.CreatedModifiedDate({
-        priority: ["frontmatter", "git", "filesystem"],
+        priority: ["frontmatter", "filesystem"],
       }),
       Plugin.SyntaxHighlighting({
         theme: {

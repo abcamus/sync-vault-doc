@@ -58,22 +58,11 @@ export const defaultContentPageLayout: PageLayout = {
       mapFn: (node) => {
         // node.displayName = node.displayName.toUpperCase()
         // node.displayName = node.data?.title ?? 'unknown title';
-
-        return node
-      },
-      sortFn: (a, b) => {
-        if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
-          return a.displayName.localeCompare(b.displayName, undefined, {
-            numeric: true,
-            sensitivity: "base",
-          })
-        }
-
-        if (!a.isFolder && b.isFolder) {
-          return 1
-        } else {
-          return -1
-        }
+        // if (node.isFolder) {
+        //   node.displayName = "📁 " + node.displayName
+        // } else {
+        //   node.displayName = "📄 " + node.displayName
+        // }
       },
     }),
   ],

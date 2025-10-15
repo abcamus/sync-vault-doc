@@ -1,5 +1,5 @@
 ---
-title: 1、受控模式：手动同步文件
+title: 受控模式：手动同步文件
 tags:
   - Obsidian同步
   - Sync Vault
@@ -26,6 +26,10 @@ tags:
 在`File explorer`中选择要下载的文件夹，点击文件右侧的下载图标，即可将文件下载到本地。
 > 图标消失表示下载成功。
 
+**加载时同步**
+在加载或者刷新受控模式下的视图时，会自动从云端下载待下载的文件。减少用户手动操作的次数。
+
+<img src="/img/sync-vault-update-on-load.png" alt="加载时同步" width="75%">
 ### 获取云端文件列表
 在`Navigation bar`中右键（移动端长按）换出右键菜单，选择`Refresh`，即可获取云端文件列表。
 

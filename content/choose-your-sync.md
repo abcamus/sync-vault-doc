@@ -6,6 +6,7 @@ tags:
   - syncvault
   - remotelysave
   - syncthing
+date: 2025-10-05
 ---
 Obsidian同步可以有多种方案，用户可基于自己的现状，比如需要同步的设备、需要支持的特性、成本等多因素选择适合自己的同步方案。下面是[Obsidian官方同步](https://obsidian.md/sync)、[iCloud](https://www.icloud.com.cn/)、[Syncthing](https://syncthing.net/)、[RemotelySave](https://github.com/remotely-save/remotely-save)、[SyncVault](https://sync-vault.com/sync-vault/)方案之间的对比，供Obsidian朋友们参考。
 

@@ -86,6 +86,7 @@ export class FileTrieNode<T extends FileTrieData = ContentDetails> {
 
   // Add new file to trie
   add(file: T) {
+    // console.log('Add entry: ', file);
     this.insert(file.slug.split("/"), file)
   }
 

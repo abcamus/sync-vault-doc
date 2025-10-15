@@ -1,5 +1,5 @@
 ---
-title: 3、点对点实时同步
+title: 点对点实时同步
 tags:
   - Obsidian同步
   - Sync Vault
@@ -41,4 +41,4 @@ $ npm run docker:run
 <img src="/img/p2p-device-connected.png" alt="设备已连接" width="75%">
 
 ## 未能直连的场景
-需要通过[[about-turn-server | TURN服务器]]进行中转，如何在NAS上部署可参考[[build-with-nas | 这里]]。
+需要通过[[turn-server| TURN服务器]]进行中转，如何在NAS上部署可参考[[build-with-nas | 这里]]。
