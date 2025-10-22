@@ -7,6 +7,15 @@ tags:
 date: 2025-10-03
 created: 2025-01-01
 ---
+### 1.0.0（2025-10-22，oracle-shell）
+* 新增云服务: 坚果云, Infinicloud, 腾讯COS, 夸克网盘.
+* 性能优化: 阿里云盘文件扫描速度提升约20倍.
+* 界面:
+	* 兼容Cupertino主题.
+	* 更多帮助信息.
+	* 简化的授权流程.
+* 其他:
+	* 阿里云盘视频播放地址到期后自动重加载.
 ### 0.9.1（2025-07-08）
 - Fix: setting warning and sync mode switch warning.
 ### 0.9.0（2025-07-07）
