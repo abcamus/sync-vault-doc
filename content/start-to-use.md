@@ -8,6 +8,11 @@ tags:
   - obsidian同步
 date: 2025-10-15
 ---
+> [!important] 注意：
+> 1. 在使用Sync Vault的时候请关闭其他同步插件，包括Ob官方同步。
+> 2. 不要在使用Sync Vault的同时将仓库放到iCloud同步目录、百度同步空间等目录中，否则会引起不可预制的错误。
+> 3. 在网盘同步的时候，建议关闭代理，代理可能导致网盘访问异常。
+
 ## 使用预制仓库（已安装Sync Vault）
 从这里👇🏻
 链接:https://pan.baidu.com/s/1MDQLxaoFRNZiwxBYDygZJg?pwd=sf6k 提取码:sf6k

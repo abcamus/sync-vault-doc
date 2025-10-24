@@ -25,6 +25,7 @@ Obsidian Sync Vault是一个简洁、高效的同步插件，帮助用户轻松�
 1. [[video-playback-revision-sync-report#播放云盘视频|网盘视频在线回放]]。
 2. [[video-playback-revision-sync-report#管理文件修订历史|文件修订历史]]。
 3. 视频生笔记（规划中）
+> [!note] [[start-to-use|点击此处]]开始使用
 ## 免费 vs 付费
 > [!note] [点击此处解锁PRO](https://kqiu.top/product/sync-vault/)
 
