@@ -1,3 +1,3 @@
 ---
-title: Sync Target
+title: Sync Files
 ---

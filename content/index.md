@@ -45,11 +45,11 @@ Obsidian Sync Vault is a concise and efficient synchronization plugin that helps
 
 > [!note] Click [[start-to-use|here]] to get started
 
-## Free vs. Paid
+## Free vs. Premium
 
 > [!note] [Click here to unlock PRO](https://kqiu.top/product/sync-vault/)
 
-| Feature                           | Free                                                         | Paid                                                                                                                      |
+| Feature                           | Free                                                         | Premium                                                                                                                   |
 | --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
 | Supported Cloud Storage           | Nutstore<br>InfiniCloud<br>Tencent COS<br>Alibaba Cloud Disk | Nutstore<br>InfiniCloud<br>Tencent COS<br>Alibaba Cloud Disk<br>==+ Baidu Netdisk==<br>==+ Quark Disk==<br>==+ OneDrive== |
 | Synchronization Methods           | Manual Sync                                                  | Manual Sync<br>==+ Auto Mode==<br>==+ Real-Time Mode==                                                                    |
