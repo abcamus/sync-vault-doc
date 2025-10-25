@@ -6,7 +6,7 @@ tags:
 ---
 ## Authorization
 
-Refer to [[baidu-cloud-disk# 授权 | Baidu Cloud Disk Authorization]]. On the authorization page, select **Alibaba Cloud Disk**, click "Authorize", and proceed to the Alibaba Cloud Disk authorization process. Log in to your Alibaba Cloud Disk account as prompted on the webpage.
+Refer to [[baidu-cloud-disk#Authorization | Baidu Cloud Disk Authorization]]. On the authorization page, select **Alibaba Cloud Disk**, click "Authorize", and proceed to the Alibaba Cloud Disk authorization process. Log in to your Alibaba Cloud Disk account as prompted on the webpage.
 
 > [!tip] Scenario where no login page redirects: The plugin detects that authorization is already active and has not expired. A single authorization for Alibaba Cloud Disk is valid for 2 hours.
 
