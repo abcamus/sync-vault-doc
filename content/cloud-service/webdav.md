@@ -1,7 +1,9 @@
 ---
 title: WebDAV
+tags:
+  - Nutstore
+  - InfiniCloud
 ---
-Sync Vault目前支持[坚果云](https://www.jianguoyun.com/)和[InfiniCloud](https://infini-cloud.net)两种WebDAV接口网盘。
+Currently, Sync Vault supports two WebDAV-enabled cloud storage services: [Nutstore](https://www.jianguoyun.com/) and [InfiniCloud](https://infini-cloud.net/).
 
-点击上方链接进入官网，获取接入地址、用户名和密码后，在开始使用页签选择InfiniCloud后，点击授权，在弹窗中输入地址、用户名和密码。
-![[start-to-use.png]]
+Click the links above to access their official websites, then obtain the **access address**, **username**, and **password**. On the "Get Started" tab, select "InfiniCloud", click "Authorize", and enter the address, username, and password in the pop-up window.![[start-to-use.png]]

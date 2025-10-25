@@ -1,19 +1,16 @@
 ---
-title: 同步插件、主题和隐藏文件
+title: Sync Plugins and thems
 tags:
-  - Obsidian同步
-  - 插件同步
-  - 主题同步
+  - obsidian
+  - Plugin
+  - Theme
 ---
+In the plugin's synchronization settings interface, there are the following options, as shown in the image:<img src="/img/sync-hidden-files.png" alt="Sync Plugins, Themes, and Hidden Files" width="75%">
 
-在插件的同步设置界面有如下选项，如下图所示：
-<img src="/img/sync-hidden-files.png" alt="同步插件、主题和隐藏文件" width="75%">
+> Note: Synchronizing plugins, themes, and hidden files only takes effect in restricted mode. Since hidden files are generally important user configurations, users need to confirm whether to sync them manually.
 
-> 注意：同步插件、主题和隐藏文件仅在受控模式下生效。因为隐藏文件一般为用户重要配置，需用户自行确认是否同步。
-
-* 显示隐藏文件（必选）
-  勾选后，会显示隐藏文件，如果需要同步`.obsidian`下的插件或者主题，该选项为必选。
-* 同步主题（可选）
-  勾选后，会在受控模式的状态视图中展示主题相关文件和文件夹。
-* 同步插件（可选）
-  勾选后，会在受控模式的状态视图中展示插件相关文件和文件夹。
+- **Show hidden files (Mandatory)**：When checked, hidden files will be displayed. This option is mandatory if you need to sync plugins or themes under the `.obsidian` folder.
+    
+- **Sync themes (Optional)**：When checked, theme-related files and folders will be displayed in the status view of restricted mode.
+    
+- **Sync plugins (Optional)**：When checked, plugin-related files and folders will be displayed in the status view of restricted mode.

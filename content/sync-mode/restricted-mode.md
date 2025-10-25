@@ -1,46 +1,47 @@
 ---
-title: 受控模式：手动同步文件
+title: Manual Sync
 tags:
-  - Obsidian同步
-  - Sync Vault
-  - 手动同步
-  - 受控模式
+  - SyncVault
+  - ManualSync
 ---
+After completing [[start-to-use|Getting Started]], click the cloud icon (sidebar <i class="fas fa-cloud"></i> on PC, or find the <i class="fas fa-cloud"></i> icon in the bottom hamburger menu <i class="fa fa-bars"></i> on mobile) to open the sync control view.
 
-在完成[[start-to-use|开始使用]]后，点击云朵图标（PC端侧边栏<i class="fas fa-cloud"></i>，移动端底部汉堡菜单<i class="fa fa-bars"></i>打开后找到<i class="fas fa-cloud"></i>图标），打开同步控制视图。
-<!-- ![restricted mode view](/img/obsidian-sync-vault-restricted-mode.jpg) -->
 <img src="/img/obsidian-sync-vault-restricted-mode.jpg" alt="restricted mode view" width="75%">
 
-### 界面介绍
-`Navigation bar`：文件导航栏，用于快速切换文件路径。
-`File explorer`：文件列表，用于查看、管理文件和文件夹。
-`Status bar`：网盘信息，展示用户名和容量。
+### Interface Introduction
 
-### 上传文件
-在`File explorer`中选择要上传的文件，点击文件右侧的上传图标，即可将文件上传到云盘。
-在`File explorer`中选择要上传的文件夹，点击文件右侧的上传图标，即可将文件上传到云盘。
-> 图标消失表示上传成功。
+`Navigation bar`: File navigation bar for quickly switching file paths.`File explorer`: File list for viewing and managing files and folders.`Status bar`: Cloud storage information, displaying username and storage capacity.
 
-### 下载文件
-在`File explorer`中选择要下载的文件，点击文件右侧的下载图标，即可将文件下载到本地。
-在`File explorer`中选择要下载的文件夹，点击文件右侧的下载图标，即可将文件下载到本地。
-> 图标消失表示下载成功。
+### Upload Files
 
-**加载时同步**
-在加载或者刷新受控模式下的视图时，会自动从云端下载待下载的文件。减少用户手动操作的次数。
+In the `File explorer`, select the file to upload and click the upload icon next to it to upload the file to the cloud storage.In the `File explorer`, select the folder to upload and click the upload icon next to it to upload the folder to the cloud storage.
 
-<img src="/img/sync-vault-update-on-load.png" alt="加载时同步" width="75%">
-### 获取云端文件列表
-在`Navigation bar`中右键（移动端长按）换出右键菜单，选择`Refresh`，即可获取云端文件列表。
+> The icon disappears when the upload is successful.
 
-### 删除文件
-在`File explorer`中选择要删除的文件，右键（移动端长按）换出右键菜单，选择`Delete`，即可将文件从本地和云盘删除。
-在`File explorer`中选择要删除的文件夹，右键（移动端长按）换出右键菜单，选择`Delete`，即可将文件夹从本地和云盘删除。
+### Download Files
 
-### 案例一：将PC端修改的文件同步到iPad
-步骤：
-1. 在PC端修改文件。
-2. 点击云盘图标，打开同步控制视图。
-3. 在`File explorer`中选择要上传的文件，点击文件右侧的上传图标，将文件上传到云盘。
-4. 在iPad端打开同步控制视图。
-5. 在`File explorer`中选择要下载的文件，点击文件右侧的下载图标（如果没有出现下载图标，刷新视图获取最新云端列表），将文件下载到iPad。
+In the `File explorer`, select the file to download and click the download icon next to it to download the file to your local device.In the `File explorer`, select the folder to download and click the download icon next to it to download the folder to your local device.
+
+> The icon disappears when the download is successful.
+
+**Sync on Load**When loading or refreshing the view in restricted mode, pending files will be automatically downloaded from the cloud. This reduces the need for manual operations.
+
+<img src="/img/sync-vault-update-on-load.png" alt="Sync on Load" width="75%">
+
+### Get Cloud File List
+
+Right-click (long-press on mobile) in the `Navigation bar` to bring up the menu, then select `Refresh` to fetch the latest cloud file list.
+
+### Delete Files
+
+In the `File explorer`, select the file to delete, right-click (long-press on mobile) to bring up the menu, and select `Delete` to remove the file from both local storage and cloud storage.In the `File explorer`, select the folder to delete, right-click (long-press on mobile) to bring up the menu, and select `Delete` to remove the folder from both local storage and cloud storage.
+
+### Example 1: Sync Modified Files from PC to iPad
+
+Steps:
+
+1. Modify the file on your PC.
+2. Click the cloud icon to open the sync control view.
+3. In the `File explorer`, select the modified file and click the upload icon next to it to upload the file to cloud storage.
+4. Open the sync control view on your iPad.
+5. In the `File explorer`, select the file to download and click the download icon next to it (if the download icon doesn’t appear, refresh the view to get the latest cloud list) to download the file to your iPad.

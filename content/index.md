@@ -1,61 +1,80 @@
 ---
-title: Sync Vault 数字家园
+tags:
+  - ObsidianSync
+  - Nutstore
+  - InfiniCloud
+  - AlibabaCloud
+  - OneDrive
+  - BaiduNetdisk
+  - QuarkDisk
+  - TencentCOS
+title: Obsidian Sync Vault
 ---
-## Obsidian Sync Vault
-### 简介
-Obsidian Sync Vault是一个简洁、高效的同步插件，帮助用户轻松解决多设备同步问题。
-#### 支持的云存储
-1. 坚果云
+## Introduction
+
+Obsidian Sync Vault is a concise and efficient synchronization plugin that helps users easily solve multi-device synchronization issues.
+
+### Supported Cloud Storage Services
+
+1. Nutstore
 2. InfiniCloud
-3. 阿里云盘
-4. 百度网盘
+3. Alibaba Cloud Disk
+4. Baidu Netdisk
 5. OneDrive
-6. 夸克网盘
-7. 腾讯COS
-#### 同步各种文件
-1. Obsidian仓库内的笔记文件，以及[[sync-thirdparty-plugins-and-themes|第三方插件和主题]]。
-2. Obsidian仓库的[[sync-thirdparty-plugins-and-themes|插件文件]]。
-3. Obsidian仓库的[[sync-thirdparty-plugins-and-themes|主题文件]]。
-4. 任意设备之间任意文件--实时同步。
-#### 多种同步方式
-1. [[restricted-mode|受控同步]]，自由控制每一个文件的同步。
-2. [[auto-mode|自动同步]]，大批量文件自动同步。
-3. [[peer-to-peer-livesync|实时同步]]，多人实时共享，超越设备限制。
-#### 更多实用功能
-1. [[video-playback-revision-sync-report#播放云盘视频|网盘视频在线回放]]。
-2. [[video-playback-revision-sync-report#管理文件修订历史|文件修订历史]]。
-3. 视频生笔记（规划中）
-> [!note] [[start-to-use|点击此处]]开始使用
-## 免费 vs 付费
-> [!note] [点击此处解锁PRO](https://kqiu.top/product/sync-vault/)
+6. Quark Disk
+7. Tencent Cloud Object Storage (COS)
 
-| 功能项        | 免费                                  | 付费                                                                             |
-| ---------- | ----------------------------------- | ------------------------------------------------------------------------------ |
-| 支持的云存储     | 坚果云<br>InfiniCloud<br>腾讯COS<br>阿里云盘 | 坚果云<br>InfiniCloud<br>腾讯COS<br>阿里云盘<br>==+百度网盘==<br>==+夸克网盘==<br>==+OneDrive== |
-| 同步方式       | 手动同步                                | 手动同步<br>==+自动模式==<br>==+实时模式==                                                 |
-| 同步对象       | 仅仓库内笔记文件                            | 仓库内文件<br>==+第三方插件==<br>==+第三方主题==                                              |
-| 性能         | 一般                                  | 高度优化                                                                           |
-| 支持的设备种类和数量 | 不限                                  | 不限                                                                             |
-| 仓库数量       | 不限                                  | 不限                                                                             |
-| 可视化看板      | 有                                   | 有                                                                              |
-| 性能和问题诊断    | 有                                   | 有                                                                              |
-| 同步报告       | 无                                   | 有                                                                              |
-| 文件修订历史     | 无                                   | 有                                                                              |
-| 冲突解决       | 始终保留最近修改                            | ==+手动合并==<br>==+增量自动合并==                                                       |
-| 视频播放       | 无                                   | ==+百度云盘视频在线播放==<br>==+阿里云盘视频在线播放==                                             |
-| 客户支持       | 社区支持                                | ==+专属客服远程协助==                                                                  |
-## 社区资源
+### Synchronize Various Files
 
-- 开源版本仓库：[obsidian-sync-vault-ce](https://github.com/abcamus/obsidian-sync-vault-ce)
-- 付费版本发布：[obsidian-sync-vault](https://github.com/abcamus/obsidian-sync-vault)
-- QQ交流群：[1023835978](https://qm.qq.com/cgi-bin/qm/qr?k=1023835978)
+1. Note files in the Obsidian vault, as well as [[sync-thirdparty-plugins-and-themes|third-party plugins and themes]].
+2. [[sync-thirdparty-plugins-and-themes|Plugin files]] in the Obsidian vault.
+3. [[sync-thirdparty-plugins-and-themes|Theme files]] in the Obsidian vault.
+4. Any files between any devices — real-time synchronization.
 
-## 常用链接
+### Multiple Synchronization Methods
 
-- [下载最新版本Obsidian](https://obsidian.md/download)
-- [Obsidian论坛](https://forum.obsidian.md/)
-- [加入Obsidian discord community](https://discord.com/invite/obsidianmd)
+1. [[restricted-mode|Restricted Sync]]: Freely control the synchronization of each individual file.
+2. [[auto-mode|Auto Sync]]: Automatically synchronize large batches of files.
+3. [[peer-to-peer-livesync|Real-Time Sync]]: Enable real-time sharing among multiple users, breaking device limitations.
 
+### More Practical Features
+
+1. [[video-playback-revision-sync-report# 播放云盘视频 | Cloud Disk Video Online Playback]].
+2. [[video-playback-revision-sync-report# 管理文件修订历史 | File Revision History]].
+3. Video-to-Note (under planning)
+
+> [!note] Click [[start-to-use|here]] to get started
+
+## Free vs. Paid
+
+> [!note] [Click here to unlock PRO](https://kqiu.top/product/sync-vault/)
+
+| Feature                           | Free                                                         | Paid                                                                                                                      |
+| --------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
+| Supported Cloud Storage           | Nutstore<br>InfiniCloud<br>Tencent COS<br>Alibaba Cloud Disk | Nutstore<br>InfiniCloud<br>Tencent COS<br>Alibaba Cloud Disk<br>==+ Baidu Netdisk==<br>==+ Quark Disk==<br>==+ OneDrive== |
+| Synchronization Methods           | Manual Sync                                                  | Manual Sync<br>==+ Auto Mode==<br>==+ Real-Time Mode==                                                                    |
+| Synchronization Objects           | Only notes in the vault                                      | Files in the vault<br>==+ Third-Party Plugins==<br>==+ Third-Party Themes==                                               |
+| Performance                       | Average                                                      | Highly Optimized                                                                                                          |
+| Supported Device Types & Quantity | Unlimited                                                    | Unlimited                                                                                                                 |
+| Number of Vaults                  | Unlimited                                                    | Unlimited                                                                                                                 |
+| Visual Dashboard                  | Available                                                    | Available                                                                                                                 |
+| Performance & Issue Diagnosis     | Available                                                    | Available                                                                                                                 |
+| Synchronization Report            | Not Available                                                | Available                                                                                                                 |
+| File Revision History             | Not Available                                                | Available                                                                                                                 |
+| Conflict Resolution               | Always keep the latest modification                          | ==+ Manual Merge==<br><br>==+ Incremental Auto Merge==                                                                    |
+| Video Playback                    | Not Available                                                | ==+ Baidu Netdisk Video Online Playback==<br><br>==+ Alibaba Cloud Disk Video Online Playback==                           |
+| Customer Support                  | Community Support                                            | ==+ Dedicated Customer Remote Assistance==                                                                                |
+
+## Community Resources
+
+- Open-Source Version Repository: [obsidian-sync-vault-ce](https://github.com/abcamus/obsidian-sync-vault-ce)
+- Paid Version Release: [obsidian-sync-vault](https://github.com/abcamus/obsidian-sync-vault)
+- QQ Group: [1023835978](https://qm.qq.com/cgi-bin/qm/qr?k=1023835978)
+
+## Common Links
+
+- [Download the Latest Version of Obsidian](https://obsidian.md/download)
+- [Obsidian Forum](https://forum.obsidian.md/)
+- [Join Obsidian Discord Community](https://discord.com/invite/obsidianmd)
 ---
-
-开始你的知识管理之旅吧！🚀
+Start your knowledge management journey now! 🚀

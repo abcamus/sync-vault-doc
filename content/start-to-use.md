@@ -1,25 +1,30 @@
 ---
-title: 开始使用
+title: Start to use
 tags:
-  - Obsidian同步
   - syncvault
-  - 阿里云盘
-  - 百度网盘
-  - obsidian同步
+  - installation
+  - obsidiansync
 date: 2025-10-15
 ---
-> [!important] 注意：
-> 1. 在使用Sync Vault的时候请关闭其他同步插件，包括Ob官方同步。
-> 2. 不要在使用Sync Vault的同时将仓库放到iCloud同步目录、百度同步空间等目录中，否则会引起不可预制的错误。
-> 3. 在网盘同步的时候，建议关闭代理，代理可能导致网盘访问异常。
+> [!important] Note:
+> 
+> 1. Please disable other synchronization plugins when using Sync Vault, including the official Obsidian Sync.
+> 2. Do not place your vault in synchronization directories such as iCloud Sync Folder or Baidu Sync Space while using Sync Vault; otherwise, unpredictable errors may occur.
+> 3. It is recommended to disable proxies during cloud disk synchronization, as proxies may cause abnormal cloud disk access.
 
-## 使用预制仓库（已安装Sync Vault）
-从这里👇🏻
-链接:https://pan.baidu.com/s/1MDQLxaoFRNZiwxBYDygZJg?pwd=sf6k 提取码:sf6k
-下载仓库目录，参考其中的`如何使用.md`使用。
-## 自行安装
-进入到插件设置界面，点击开始使用标签 => 点击开始授权按扭，按照屏幕指示完成网盘授权。
-安装、激活、网盘授权步骤，[点击查看](https://kqiu.top/sync-vault-user-mannual-040/)，成功后的界面如下图所示：
+## Using the Preconfigured Vault (Sync Vault Installed)
+
+Download the vault directory from the link below👇🏻Link: [https://pan.baidu.com/s/1MDQLxaoFRNZiwxBYDygZJg?pwd=sf6k](https://pan.baidu.com/s/1MDQLxaoFRNZiwxBYDygZJg?pwd=sf6k)Extraction Code: sf6kRefer to the "How to Use.md" file included in the directory for usage instructions.
+
+## Manual Installation
+
+1. Navigate to the plugin settings page.
+2. Click the "Get Started" tab.
+3. Click the "Start Authorization" button and follow the on-screen instructions to complete cloud disk authorization.
+
+For detailed steps on installation, activation, and cloud disk authorization, [click here to view](https://kqiu.top/sync-vault-user-mannual-040/). The interface after successful setup is shown in the image below:
 
 ![[sync-vault-activation.png]]
-> [!note] 点击[此处](https://kqiu.top/product/sync-vault/)获取激活码
+
+> [!note] Click [here](https://kqiu.top/product/sync-vault/) to obtain an activation code
+

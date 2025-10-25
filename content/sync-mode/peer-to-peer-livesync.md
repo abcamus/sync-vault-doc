@@ -1,23 +1,31 @@
 ---
-title: 点对点实时同步
+title: Peer-to-peer Live Sync
 tags:
-  - Obsidian同步
-  - Sync Vault
-  - 实时同步
   - peer-to-peer
+  - LiveSync
+  - SignalingServer
 ---
-> [!warning] 基于0.9.1版本，如果beta版本有更新，以最新版本为主。
-## 使用场景
-1. 需要极致实时同步体验。
-2. 需要多人实时共享内容。
-## 体验网页版本
-请前往：[点对点同步网页版](demo.sync-vault.com)
-## 如何操作
-当多台待同步设备位于同一局域网内时（或者通过中转服务器，公测进行中，[点击了解](https://kqiu.top/obsidian-sync-vault-livesync-beta/)），可使用peer to peer同步文件。
-> 本功能需要使用信令服务器，详见[启动信令服务器](#启动信令服务器)。
-> 按照上述步骤操作完成后，多个仓库上的内容会自动进行同步；在一个仓库中编辑的内容会实时更新到其他仓库中。
+> [!warning] Based on version 0.9.1. If there are updates to the beta version, the latest version shall prevail.
 
-### 步骤一：启动信令服务器
+## Usage Scenarios
+
+1. Need an extreme real-time synchronization experience.
+2. Need multi-user real-time content sharing.
+
+## Try the Web Version
+
+Please visit: [Peer-to-Peer Sync Web Version](https://www.doubao.com/chat/demo.sync-vault.com)
+
+## How to Operate
+
+When multiple devices to be synchronized are on the same LAN (or via a relay server, public beta in progress, [click to learn more](https://kqiu.top/obsidian-sync-vault-livesync-beta/)), you can use peer-to-peer (P2P) to sync files.
+
+> This feature requires the use of a signaling server. For details, see [Start the Signaling Server](https://www.doubao.com/chat/26013069559978498#start-the-signaling-server).After following the above steps, the content across multiple vaults will sync automatically; edits made in one vault will be updated to other vaults in real time.
+
+### Step 1: Start the Signaling Server
+
+bash
+
 ```bash
 $ git clone git@github.com:abcamus/webrtc-signaling-server.git
 $ cd webrtc-signaling-server
@@ -25,20 +33,23 @@ $ npm run docker:build
 $ npm run docker:run
 ```
 
-查看信令服务器IP，假设为`X.X.X.X:1234`。
+Check the signaling server IP (assumed to be `X.X.X.X:1234`).
 
-### 步骤二：配置peer to peer同步
-1. 打开`Sync Vault`插件设置，选择`Get started`，选择`Real-time sync`。
-2. 点击`Sync settings`，在`Connection server`输入框中输入`ws://X.X.X.X:1234`。
+### Step 2: Configure Peer-to-Peer Sync
 
-### 步骤三：发现和连接设备
-点击云朵图标（PC端侧边栏<i class="fas fa-cloud"></i>，移动端底部汉堡菜单<i class="fa fa-bars"></i>中<i class="fas fa-cloud"></i>图标）。
-<!-- ![p2p模式视图](/img/p2p-mode-view.png) -->
-<img src="/img/p2p-mode-view.png" alt="p2p模式视图" width="75%">
+1. Open the `Sync Vault` plugin settings, select `Get started`, then choose `Real-time sync`.
+2. Click `Sync settings`, and enter `ws://X.X.X.X:1234` in the `Connection server` input box.
 
-在`Connection status`中显示了当前设备名字和连接的设备数量。
-<!-- ![设备已连接](/img/p2p-device-connected.png) -->
-<img src="/img/p2p-device-connected.png" alt="设备已连接" width="75%">
+### Step 3: Discover and Connect Devices
 
-## 未能直连的场景
-需要通过[[turn-server| TURN服务器]]进行中转，如何在NAS上部署可参考[[build-with-nas | 这里]]。
+Click the cloud icon (sidebar <i class="fas fa-cloud"></i> on PC, or <i class="fas fa-cloud"></i> icon in the bottom hamburger menu <i class="fa fa-bars"></i> on mobile).
+
+<img src="/img/p2p-mode-view.png" alt="P2P Mode View" width="75%">
+
+The `Connection status` shows the current device name and the number of connected devices.
+
+<img src="/img/p2p-device-connected.png" alt="Devices Connected" width="75%">
+
+## Scenarios Where Direct Connection Fails
+
+Relay via a [[turn-server| TURN Server]] is required. For how to deploy it on a NAS, refer to [[build-with-nas | here]].

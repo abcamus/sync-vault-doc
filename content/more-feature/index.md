@@ -1,3 +1,3 @@
 ---
-title: 更多功能
+title: Extra Features
 ---

@@ -1,18 +1,17 @@
 ---
-title: 自动同步模式
+title: Auto Sync
 tags:
-  - Obsidian同步
-  - Sync Vault
-  - 自动同步
+  - SyncVault
+  - AutoSync
 ---
+In Auto Mode, users don’t need manual operation—files will sync automatically.
 
-自动模式下，用户无需手动操作，文件会自动同步。
+Click the cloud icon (sidebar <i class="fas fa-cloud"></i> on PC, or <i class="fas fa-cloud"></i> icon in the bottom hamburger menu <i class="fa fa-bars"></i> on mobile) to open the sync control view.<img src="/img/sync-vault-auto-mode.png" alt="sync vault auto mode view" width="75%">
 
-点击云朵图标（PC端侧边栏<i class="fas fa-cloud"></i>，移动端底部汉堡菜单<i class="fa fa-bars"></i>中<i class="fas fa-cloud"></i>图标），打开同步控制视图。
-<img src="/img/sync-vault-auto-mode.png" alt="sync vault auto mode view" width="75%">
+### Stop and Restart Auto Sync
 
-### 停止和重启自动同步
-点击`Stop/Start syncing`按钮，可停止或重启自动同步。
+Click the `Stop/Start syncing` button to stop or restart auto sync.
 
-### 查看同步报告
-点击`View sync report`按钮，可查看同步报告。
+### View Sync Report
+
+Click the `View sync report` button to check the sync report.

@@ -1,14 +1,17 @@
 ---
-title: 阿里云盘
+title: Alibaba Cloud Disk
 tags:
-  - Obsidian同步
-  - 阿里云盘
+  - ObsidianSync
+  - AlibabaCloud
 ---
-## 授权
-参考[[baidu-cloud-disk#授权|百度网盘授权]]，在授权页面选择阿里云盘，点击授权，进入阿里云盘授权流程。按网页提示登陆阿里云盘帐号。
-> [!tip] 不会跳转到登陆页面的场景：插件检测到当前已经授权，且授权未到期。阿里云盘单次授权有效期是2小时。
+## Authorization
 
-## 取消授权
-<img src="/img/aliyunpan-cancel-auth.png" alt="取消阿里云盘授权" width="75%" style="display: block; margin: 0 auto;">
+Refer to [[baidu-cloud-disk# 授权 | Baidu Cloud Disk Authorization]]. On the authorization page, select **Alibaba Cloud Disk**, click "Authorize", and proceed to the Alibaba Cloud Disk authorization process. Log in to your Alibaba Cloud Disk account as prompted on the webpage.
 
-打开阿里云盘网页端，进入到三方应用-授权管理，可以解除sync vault授权。
+> [!tip] Scenario where no login page redirects: The plugin detects that authorization is already active and has not expired. A single authorization for Alibaba Cloud Disk is valid for 2 hours.
+
+## Cancel Authorization
+
+<img src="/img/aliyunpan-cancel-auth.png" alt="Cancel Alibaba Cloud Disk Authorization" width="75%" style="display: block; margin: 0 auto;">
+
+Open the Alibaba Cloud Disk web version, navigate to **Third-Party Apps > Authorization Management**, and you can revoke the authorization for Sync Vault.

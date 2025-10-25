@@ -1,109 +1,136 @@
 ---
-title: 常见问题
+title: Faq
 tags:
   - syncvault
-  - obsidian/同步
   - FAQ
   - diagnose
 date: 2025-10-02
 ---
-## 常见问题
-1. 网盘授权失败。请检查是否打开了网络代理，或者打开终端，[[#查看终端错误日志]]。
-2. 没有文件同步到新设备上且网盘上没有仓库对应的文件夹。检查仓库文件名是否合法，[关于百度网盘文件名符号问题](https://www.zhihu.com/question/401747378)
-3. 部分文件同步失败
-	1. 检查文件路径是否含有表情符号，表情符号为非法名字。
-	2. 在自动模式下可能出现由于网络变化导致同步失败，这种情况下会在下一个同步时刻自动重试。
-	3. 尝试切换到受控模式手动同步。如果手动无法同步，请前往 [Github](https://github.com/abcamus/obsidian-sync-vault-ce)或者[Gitee](https://gitee.com/abcamus/obsidian-sync-vault-release)提issue，或者社区群里交流讨论。
-## 如何自行诊断
-同步过程体验依赖于一些外部环境，比如
-1. 网络稳定性影响同步的稳定性。
-2. 网络带宽影响同步速度。
-3. 网络拓扑影响点对点的连接能力。
-4. 网盘帐号等级影响下载速度。
+# Frequently Asked Questions (FAQs)
 
-**Sync Vault用户在使用过程中有可以根据需要自行诊断当前同步情况。**
+1. **Cloud Drive Authorization Failure**Check if a network proxy is enabled. Alternatively, open the terminal and refer to [[#View Terminal Error Logs]].
+    
+2. **No Files Synced to New Devices & No Repository Folder on Cloud Drive**Verify if the repository name is valid. For details on Baidu Cloud Drive filename symbol restrictions, see [this link](https://www.zhihu.com/question/401747378).
+    
+3. **Partial File Sync Failure**
+    
+    1. Check if the file path contains emojis—emojis are considered invalid characters.
+    2. In Automatic Mode, sync failures may occur due to network changes. The system will automatically retry in the next sync cycle.
+    3. Try switching to Controlled Mode for manual sync. If manual sync still fails, submit an issue on [Github](https://github.com/abcamus/obsidian-sync-vault-ce) or [Gitee](https://gitee.com/abcamus/obsidian-sync-vault-release), or discuss it in the community group.
 
+# Self-Diagnosis Guide
+
+The sync experience depends on external factors, including:
+
+1. Network stability (affects sync stability).
+2. Network bandwidth (affects sync speed).
+3. Network topology (affects peer-to-peer connection capability).
+4. Cloud drive account tier (affects download speed).
+
+**Sync Vault users can self-diagnose sync issues as needed.**
 ```mermaid
-graph LR
-Q2(同步速度慢)
-Q1(文件同步错误)
-
-A1(进行同步速度测试，择优选择网盘)
-A2(获取诊断概览信息-查看错误)
-A3(查看最近一次同步报告-获取详细错误信息)
-
-Q1-->A2 & A3
+graph LR 
+Q2(Slow Sync Speed) 
+Q1(File Sync Errors) 
+A1(Run sync speed tests and select the optimal cloud drive) 
+A2(Obtain diagnostic overview - check errors) 
+A3(View latest sync report - get detailed error info) 
+Q1-->A2 & A3 
 Q2-->A1
 ```
-### 获取诊断概览信息
-进入【仓库信息】设置页签，点击“诊断”按钮，可以看到诊断信息，包括下面几个部分：
-1. 系统信息，可以看到Obsidian版本、Sync Vault版本和当前系统类型。
-	```json
-	{
-	    "platform": "macOS",
-	    "obsidianVersion": "obsidian仓库 - Obsidian v1.9.12",
-	    "pluginVersion": "0.9.10.beta2"
-	}
-	```
-2. 仓库信息，总文件数，仓库对应的云端路径。
-	```json
-	{
-	    "name": "obsidian仓库",
-	    "path": "/apps/obsidian/obsidian仓库",
-	    "totalFiles": 513,
-	    "configPath": "/apps/obsidian/obsidian仓库"
-	}
-	```
-3. 当前配置，插件相关配置
-	```json
-	{
-		"ignorePattern": "^(新文件夹).*$",
-	    "fileSizeLimit": 100,
-	    "encryptMode": false,
-	    "syncThemes": true,
-	    "syncPlugins": true,
-	    "showHidden": true
-	}
-	```
-4. 同步状态，包括当前同步模式、网盘、授权码到期时间
-	```json
-	{
-		"mode": "restricted",
-	    "isLiveMode": true,
-	    "cloudDisk": "baidu",
-	    "tokenValid": true,
-	    "tokenExpiry": "2025/9/20 11:40:15",
-	    "lastSyncTime": null
-	}
-	```
-5. 同步统计，记录了上次同步时间、总同步次数、最近错误
-	```json
-	{
-		"lastSyncTime": null,
-	    "totalSyncTimes": 0,
-	    "recentErrors": [],
-	    "totalFilesProcessed": 0
+
+## Obtain Diagnostic Overview
+
+Go to the **Repository Info** settings tab, click the "Diagnose" button, and view the diagnostic information, which includes the following sections:
+
+1. **System Information**Displays Obsidian version, Sync Vault version, and current system type.
+    
+    json
+    
+    ```json
+    {
+        "platform": "macOS",
+        "obsidianVersion": "Obsidian Repository - Obsidian v1.9.12",
+        "pluginVersion": "0.9.10.beta2"
     }
-	```
-6. 最近发生的错误
-	```json
-	{
-		"recentErrors": []
-	}
-	```
-### 查看最近一次同步报告
-在通过网盘同步的时候，用户可以获取最近一次详细同步记录。具体操作方法可以参考 [[video-playback-revision-sync-report#查看同步报告|查看同步报告]]。
-### 测试同步速度
-进入【高级功能】-【Debug】，找到“Cloud Drive Performance”项，点击右侧的Perf按钮，弹出如下界面：
-![[cloud-drive-perf-test.png#pic_center|400]]
+    ```
+    
+2. **Repository Information**Total number of files and the cloud path corresponding to the repository.
+    
+    ```json
+    {
+        "name": "Obsidian Repository",
+        "path": "/apps/obsidian/Obsidian Repository",
+        "totalFiles": 513,
+        "configPath": "/apps/obsidian/Obsidian Repository"
+    }
+    ```
+    
+3. **Current Configuration**Plugin-related settings.
 
-点击对应网盘的测试按钮可以对网盘速度进行测试。下图为**商场公共wifi环境下，非网盘会员速度**体验：
-![[cloud-speed-test-report.png|400]]
+    ```json
+    {
+         "ignorePattern": "^(New Folder).*$",
+         "fileSizeLimit": 100,
+         "encryptMode": false,
+         "syncThemes": true,
+         "syncPlugins": true,
+         "showHidden": true
+    }
+    ```
+    
+4. **Sync Status**Includes current sync mode, cloud drive, and authorization code expiration time.
+    
+    ```json
+    {
+         "mode": "restricted",
+         "isLiveMode": true,
+         "cloudDisk": "baidu",
+         "tokenValid": true,
+         "tokenExpiry": "2025/9/20 11:40:15",
+         "lastSyncTime": null
+    }
+    ```
+    
+5. **Sync Statistics**Records last sync time, total sync attempts, and recent errors.
+    
+    ```json
+    {
+         "lastSyncTime": null,
+         "totalSyncTimes": 0,
+         "recentErrors": [],
+         "totalFilesProcessed": 0
+    }
+    ```
+    
+6. **Recent Errors**
+    
+    ```json
+    {
+         "recentErrors": []
+    }
+    ```
+    
 
-- 下载速度：当前环境下文件下载速度。
-- 上传速度：当前环境下文件上传速度。
-- 时延：网盘API的访问时延，基本可以等价于一次同步所需要的最小时延。
+## View the Latest Sync Report
 
-关于各个网盘的详细同步性能分析，可以[[performance|点击此处]]查看。
-### 查看终端错误日志
-打开Obsidian终端查看错误，mac: `cmd+option+i`, win: `ctrl+shift+I`。
+During cloud drive sync, users can access the detailed record of the latest sync. For specific operations, refer to [[sync-report | View Sync Report]].
+
+## Test Sync Speed
+
+1. Go to **Advanced Features** > **Debug**.
+2. Locate the "Cloud Drive Performance" section and click the "Perf" button on the right. The following interface will pop up:![[cloud-drive-perf-test.png#pic_center|400]]
+3. Click the test button for the corresponding cloud drive to test its speed. The image below shows the speed experience for **non-cloud drive members on public mall WiFi**:![[cloud-speed-test-report.png|400]]
+
+- **Download Speed**: File download speed in the current environment.
+- **Upload Speed**: File upload speed in the current environment.
+- **Latency**: Access latency of the cloud drive API, which is roughly equivalent to the minimum latency required for one sync.
+
+For detailed sync performance analysis of each cloud drive, click [[performance|here]].
+
+## View Terminal Error Logs
+
+Open the Obsidian terminal to check for errors:
+
+- macOS: Press `cmd+option+i`
+- Windows: Press `ctrl+shift+I`

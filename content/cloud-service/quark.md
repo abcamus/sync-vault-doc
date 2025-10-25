@@ -1,13 +1,12 @@
 ---
-title: 夸克网盘
+title: Quark Disk
 tags:
-  - Obsidian同步
-  - 夸克网盘
+  - syncvault
+  - QuarkDisk
+  - Obsidian
 ---
-## 获取Cookie
-进入[夸克网盘官网](https://pan.quark.cn/)，登陆后打开浏览器的开发者终端，点击网络标签，在底下的消息中找到Cookie字段，如下所示。
-![[quark cookie.png]]
-## 授权
-![[auth-button.png]]
-在上述授权页面中选择夸克，然后点击授权，输入上面获取到的Cookie。
-![[set cookie.png]]
+## Obtaining the Cookie
+
+Go to the [Quark Disk official website](https://pan.quark.cn/), log in, then open your browser's Developer Tools and click the **Network** tab. Locate the **Cookie** field in the network requests below, as shown in the image.![[quark cookie.png]]
+## Authorization
+![[auth-button.png]]On the authorization page mentioned above, select **Quark**, then click **Authorize** and enter the Cookie obtained earlier.![[set cookie.png]]

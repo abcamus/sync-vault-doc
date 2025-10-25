@@ -1,3 +1,3 @@
 ---
-title: 同步方式
+title: Sync Mode
 ---

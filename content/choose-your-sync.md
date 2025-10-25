@@ -1,83 +1,116 @@
 ---
-title: 选择合适的同步方案
+title: Obsidian Sync Solutions
 tags:
-  - Obsidian同步
-  - icloud
-  - syncvault
   - remotelysave
   - syncthing
+  - ObsidianSync
+  - iCloud
 date: 2025-10-05
 ---
-Obsidian同步可以有多种方案，用户可基于自己的现状，比如需要同步的设备、需要支持的特性、成本等多因素选择适合自己的同步方案。下面是[Obsidian官方同步](https://obsidian.md/sync)、[iCloud](https://www.icloud.com.cn/)、[Syncthing](https://syncthing.net/)、[RemotelySave](https://github.com/remotely-save/remotely-save)、[SyncVault](https://sync-vault.com/sync-vault/)方案之间的对比，供Obsidian朋友们参考。
+# Obsidian Sync Solutions Comparison
 
-1. [[sync-comparison#平台兼容性|跨平台兼容性对比]]。
-2. [[sync-comparison#功能|特性对比]]。
-3. [[sync-comparison#定价|主要参数与定价]]。
+Obsidian offers multiple sync solutions. Users can choose the one that best fits their needs based on factors like the devices they need to sync, required features, and costs. Below is a comparison of [Obsidian Official Sync](https://obsidian.md/sync), [iCloud](https://www.icloud.com.cn/), [Syncthing](https://syncthing.net/), [RemotelySave](https://github.com/remotely-save/remotely-save), and [SyncVault](https://sync-vault.com/sync-vault/) for Obsidian users' reference.
 
-## 按照使用场景选择
-### 场景一：仅苹果平台
-- 推荐：iCloud。推荐理由：设备自带，无需配置。
-- 可选：Obsidian官方、Sync Vault、Remotely Save
-### 场景二：全平台+免费
-- 推荐：Sync Vault社区版+坚果云/Infinicloud/阿里云盘。推荐理由：简单、界面用户友好。
-- 可选：Remotely Save+坚果云Webdav
-### 场景三：全平台+OSS费用+少量配置操作
-- 推荐：Sync Vault社区版+腾讯COS。推荐理由：安装、配置极为简单，有可视化同步界面。
-- 可选：Remotely Save+阿里云OSS/亚马逊AWS
-### 场景四：全平台+仓库多+容量大+设备多
-- 推荐：Sync Vault+百度网盘。推荐理由：百度网盘容量大，仓库容量上限为网盘容量，会员速度体验佳，不限设备和仓库数量。
-### 场景五：全平台+仓库不多+容量不大+对价格不敏感
-- 推荐：Obsidian官方同步。推荐理由：Obsidian内置，配置简单，但对仓库数量和大小有限制。
-### 场景六：免费+无iOS设备+喜欢自己动手研究
-- 推荐：Syncthing
-### 场景七：有NAS
-- 推荐一：Sync Vault+实时同步+[[build-with-nas|NAS部署]]。推荐理由：实时同步Beta版本免费使用，部署较简单。
-- 推荐二：Syncthing+实时同步。
-- 可选一：Remotely Save+Webdav。
-- 可选二：Sync Vault社区版+Webdav。
-### 场景八：追求极致隐私和实时同步
-- 推荐一：Sync Vault+实时同步。推荐理由：仅设备间数据共享，Beta版本免费使用，部署较为简单。
-- 推荐二：Syncthing+实时同步。
+1. [[sync-comparison#Cross-Platform Compatibility|Cross-Platform Compatibility Comparison]]
+2. [[sync-comparison#Features|Feature Comparison]]
+3. [[sync-comparison#Pricing|Key Parameters & Pricing]]
 
-## 各方案比较：兼容性+功能+价格
-### 平台兼容性
+## Choose by Usage Scenario
 
-|  平台名称   | 官方同步 | iCloud | Syncthing | RemotelySave | SyncVault |
-| :-----: | :--: | :----: | :-------: | :----------: | :-------: |
-| Windows |  ✅   |   ❌    |     ✅     |      ✅       |     ✅     |
-|  macOS  |  ✅   |   ✅    |     ✅     |      ✅       |     ✅     |
-|  Linux  |  ✅   |   ❌    |     ✅     |      ✅       |     ✅     |
-|   iOS   |  ✅   |   ✅    |     ❌     |      ✅       |     ✅     |
-| Android |  ✅   |   ❌    |     ✅     |      ✅       |     ✅     |
-### 功能
+### Scenario 1: Apple Ecosystem Only
 
-|     功能名称      |   官方同步   | iCloud |   Syncthing   |    RemotelySave    |               SyncVault                |
-| :-----------: | :------: | :----: | :-----------: | :----------------: | :------------------------------------: |
-|   选择性同步[^1]   |    ✅     |   ❌    |       ✅       |         ✅          |                   ✅                    |
-|     插件同步      |    ✅     |   ✅    |       ✅       |         ✅          |                   ✅                    |
-|  多人共享仓库[^2]   |    ✅     |   ❌    |       ✅       |         ❌          |                   ✅                    |
-|      加密       |    ✅     |   ✅    |       ✅       |         ✅          |                   ✅                    |
-|    多设备同时同步    |    ✅     |   ✅    |       ✅       |         ✅          |                   ✅                    |
-| 自定义存储[^3]<br> |    ❌     |   ❌    | ✅，可运行在NAS等设备中 | ✅，支持多种云盘及Webdav、S3 | ✅，支持百度网盘、阿里云盘、onedrive；社区办支持Webdav、 S3 |
-|  冲突处理方式[^4]   | ✅，生成冲突副本 |   ❌    |    ✅，生成副本     |       ✅，生成副本       |                 ✅[^4]                  |
-|     修订历史      |    ✅     |   ❌    |       ✅       |         ❌          |                   ✅                    |
-### 定价
+- **Recommended**: iCloud
+    
+    Reason: Pre-installed on devices, no configuration required.
+- **Alternatives**: Obsidian Official Sync, SyncVault, Remotely Save
 
-|   参数   |             官方同步              |        iCloud         | Syncthing | RemotelySave |              SyncVault              |
-| :----: | :---------------------------: | :-------------------: | :-------: | :----------: | :---------------------------------: |
-|  仓库数量  | 1个（标准版[^5]）<br>10个（Plus版[^6]） |          不限           |    不限     |      不限      |                 不限                  |
-| 总存储容量  |    1GB（标准版）<br>10GB（Plus版）    | 5GB（免费）<br>50GB（¥6/月） | 等于存储媒介的大小 |  等于存储媒介的大小   |               等于网盘容量                |
-| 最大文件尺寸 |             200MB             |          不限           |    不限     |      不限      |                 不限                  |
-|   价格   |  \$4/月（标准版）<br>\$16/月（Plus版）  |       50GB，¥6/月       |    免费     |      免费      | 社区版本免费；Pro版本一次性买断¥199，基础版本一次性买断¥99。 |
-[^1]: 选择性同步：指用户指定仓库中的部分文件进行同步。iCloud只能同步整个仓库。
-[^2]: 多人共享仓库：多个用户共同编辑同一个Ob仓库。
-[^3]: 自定义存储：方案可以支持多种存储设备，比如云盘、NAS等。
-[^4]: 冲突处理方式：多个终端同时修改相同的内容时的处理方法。Sync Vault为[[video-playback-revision-sync-report#管理文件修订历史|生成修订历史]]
-[^5]: 标准版年付：\$4/月，月付：\$5/月
-[^6]: Plus版年付：\$8/月，月付：\$10/月
-## 参考链接
-[1] Obsidian sync, https://obsidian.md/sync/
-[2] iCloud, https://www.icloud.com.cn/
-[3] Syncthing, https://docs.syncthing.net/
-[4] RemotelySave, https://remotelysave.com/
-[5] SyncVault, https://sync-vault.com/sync-vault/
+### Scenario 2: Full Platform Support + Free
+
+- **Recommended**: SyncVault Community Edition + Nutstore/Infinicloud/Alibaba Cloud Drive
+    
+    Reason: Simple to use with a user-friendly interface.
+- **Alternative**: Remotely Save + Nutstore WebDAV
+
+### Scenario 3: Full Platform Support + OSS Costs + Minimal Configuration
+
+- **Recommended**: SyncVault Community Edition + Tencent Cloud Object Storage (COS)
+    
+    Reason: Extremely easy to install and configure, with a visual sync interface.
+- **Alternative**: Remotely Save + Alibaba Cloud OSS/Amazon AWS
+
+### Scenario 4: Full Platform Support + Multiple Repositories + Large Storage + Many Devices
+
+- **Recommended**: SyncVault + Baidu Cloud Drive
+    
+    Reason: Baidu Cloud Drive offers large storage capacity (repository size limited only by cloud drive capacity), good speed with a membership, and no restrictions on the number of devices or repositories.
+
+### Scenario 5: Full Platform Support + Few Repositories + Small Storage + Price Insensitivity
+
+- **Recommended**: Obsidian Official Sync
+    
+    Reason: Built into Obsidian with simple configuration, but limited by the number and size of repositories.
+
+### Scenario 6: Free + No iOS Devices + Enjoy DIY Configuration
+
+- **Recommended**: Syncthing
+
+### Scenario 7: Own a NAS
+
+- **Recommendation 1**: SyncVault + Real-Time Sync + [[build-with-nas|NAS Deployment]]
+    
+    Reason: Free to use the beta version of real-time sync, with simple deployment.
+- **Recommendation 2**: Syncthing + Real-Time Sync
+- **Alternative 1**: Remotely Save + WebDAV
+- **Alternative 2**: SyncVault Community Edition + WebDAV
+
+### Scenario 8: Pursuit of Ultimate Privacy + Real-Time Sync
+
+- **Recommendation 1**: SyncVault + Real-Time Sync
+    
+    Reason: Data shared only between devices, free to use the beta version, with relatively simple deployment.
+- **Recommendation 2**: Syncthing + Real-Time Sync
+
+## Solution Comparison: Compatibility, Features & Pricing
+
+### Cross-Platform Compatibility
+
+| Platform | Official Sync | iCloud | Syncthing | RemotelySave | SyncVault |
+| :------- | :------------ | :----- | :-------- | :----------- | :-------- |
+| Windows  | ✅             | ❌      | ✅         | ✅            | ✅         |
+| macOS    | ✅             | ✅      | ✅         | ✅            | ✅         |
+| Linux    | ✅             | ❌      | ✅         | ✅            | ✅         |
+| iOS      | ✅             | ✅      | ❌         | ✅            | ✅         |
+| Android  | ✅             | ❌      | ✅         | ✅            | ✅         |
+
+### Features
+
+|Feature|Official Sync|iCloud|Syncthing|RemotelySave|SyncVault|
+|:--|:--|:--|:--|:--|:--|
+|Selective Sync[^1]|✅|❌|✅|✅|✅|
+|Plugin Sync|✅|✅|✅|✅|✅|
+|Multi-User Shared Repositories[^2]|✅|❌|✅|❌|✅|
+|Encryption|✅|✅|✅|✅|✅|
+|Simultaneous Multi-Device Sync|✅|✅|✅|✅|✅|
+|Custom Storage[^3]|❌|❌|✅ (Runs on NAS, etc.)|✅ (Supports multiple cloud drives, WebDAV, S3)|✅ (Supports Baidu Cloud Drive, Alibaba Cloud Drive, OneDrive; Community Edition supports WebDAV, S3)|
+|Conflict Resolution[^4]|✅ (Generates conflict copies)|❌|✅ (Generates copies)|✅ (Generates copies)|✅[^4]|
+|Revision History|✅|❌|✅|❌|✅|
+
+### Pricing
+
+|Parameter|Official Sync|iCloud|Syncthing|RemotelySave|SyncVault|
+|:--|:--|:--|:--|:--|:--|
+|Number of Repositories|1 (Standard Plan[^5])<br><br>10 (Plus Plan[^6])|Unlimited|Unlimited|Unlimited|Unlimited|
+|Total Storage Capacity|1GB (Standard Plan)<br><br>10GB (Plus Plan)|5GB (Free)<br><br>50GB (¥6/month)|Equal to storage medium|Equal to storage medium|Equal to cloud drive capacity|
+|Maximum File Size|200MB|Unlimited|Unlimited|Unlimited|Unlimited|
+|Price|$4/month (Standard Plan)<br><br>$16/month (Plus Plan)|50GB for ¥6/month|Free|Free|Community Edition: Free; Pro Edition: One-time payment of ¥199; Basic Edition: One-time payment of ¥99|
+
+[^1]: Selective Sync: Allows users to specify only certain files within a repository for syncing. iCloud can only sync entire repositories.
+[^2]: Multi-User Shared Repositories: Multiple users collaboratively editing the same Obsidian repository.
+[^3]: Custom Storage: The solution supports multiple storage devices (e.g., cloud drives, NAS).
+[^4]: Conflict Resolution: Methods for handling cases where the same content is modified simultaneously on multiple terminals. SyncVault uses [[video-playback-revision-sync-report#Manage File Revision History|revision history generation]].
+[^5]: Standard Plan Annual Billing: $4/month; Monthly Billing: $5/month
+[^6]: Plus Plan Annual Billing: $8/month; Monthly Billing: $10/month
+
+## Reference Links
+
+[1] Obsidian Sync, [https://obsidian.md/sync/](https://obsidian.md/sync/)[2] iCloud, [https://www.icloud.com.cn/](https://www.icloud.com.cn/)[3] Syncthing, [https://docs.syncthing.net/](https://docs.syncthing.net/)[4] RemotelySave, [https://remotelysave.com/](https://remotelysave.com/)[5] SyncVault, [https://sync-vault.com/sync-vault/](https://sync-vault.com/sync-vault/)

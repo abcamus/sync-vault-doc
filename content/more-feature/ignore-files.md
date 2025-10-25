@@ -1,14 +1,13 @@
 ---
-title: 忽略文件
+title: Ignore Files
 tags:
-  - Obsidian同步
-  - 忽略文件
+  - IgnoreFiles
+  - SyncVault
 ---
-在某些情况下，用户可能需要忽略大文件的同步，比如占用空见较大的视频文件等等。
+In some cases, users may need to exclude large files from synchronization, such as video files that take up significant storage space.
 
-此时，可以通过忽略文件功能将这些文件过滤掉。
+In such scenarios, you can filter out these files using the **File Exclusion** feature.
 
-Sync Vault支持按照正则表达式匹配文件路径进行过滤和按照文件大小过滤。
-[按照正则表达式过滤文件](https://kqiu.top/sync-vault-use-regexr/)
+Sync Vault supports file filtering in two ways: by matching file paths with regular expressions and by filtering based on file size. [Filter Files by Regular Expressions](https://kqiu.top/sync-vault-use-regexr/)
 
-<img src="/img/sync-vault-ignore-files.png" alt="文件过滤" width="75%">
+<img src="/img/sync-vault-ignore-files.png" alt="File Filtering" width="75%">

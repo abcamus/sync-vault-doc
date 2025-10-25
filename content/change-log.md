@@ -1,210 +1,333 @@
 ---
-title: 更新日志
+title: ChangeLog
 tags:
-  - Obsidian同步
   - syncvault
   - changelog
 date: 2025-10-03
 created: 2025-01-01
 ---
-### 1.0.0（2025-10-22，oracle-shell）
-* 新增云服务: 坚果云, Infinicloud, 腾讯COS, 夸克网盘.
-* 性能优化: 阿里云盘文件扫描速度提升约20倍.
-* 界面:
-	* 兼容Cupertino主题.
-	* 更多帮助信息.
-	* 简化的授权流程.
-* 其他:
-	* 阿里云盘视频播放地址到期后自动重加载.
-### 0.9.1（2025-07-08）
-- Fix: setting warning and sync mode switch warning.
-### 0.9.0（2025-07-07）
-- 新增：云盘浏览器，点击pdf在线阅读，视频在线播放。
-### 0.8.12（2025-06-19）
-- 新增：仓库一键诊断。
-- 优化：受控模式同步状态显示。
-### 0.8.11（2025-06-11）
-- 优化：受控模式下文件图标、同步状态图标。
-- 新增：视频回放右键菜单。
-### 0.8.10（2025-06-04）
-- 新增：受控模式下增加插件同步、主题同步和隐藏文件同步。
-- 优化：云盘同步实时性。
-### 0.8.9（2025-06-03）
-- 优化：设置界面。
-### 0.8.8（2025-05-30）
-- 优化：webrtc数据通道传输。
-- 优化：简化设置界面。
-- 新增：同步报告显示插件版本。
-### 0.8.7（2025-05-26）
-- 新增：手动冲突合并和增量自动合并。
-- 优化：修订历史视图支持删除修订。
-### 0.8.6（2025-05-19）
-- 修复：CORS
-### 0.8.5（2025-05-19）
-- 新增：受控模式增加文件右键菜单。
-- 新增：支持百度网盘、阿里云盘视频在线播放。
-- 修复：
-    - [IC8K1L](https://gitee.com/abcamus/obsidian-sync-vault-release/issues/IC8K1L)
-    - onedrive插件同步日志
-### 0.8.4（2025-05-12）
+### 1.0.0 (2025-10-22, oracle-shell)
 
-- 新增：受控模式导航栏增加右键菜单。
-- 新增：自动模式下同步视图显示网盘容量。
-- 修改：部分UI。
-- 修复：[IC6W56](https://gitee.com/abcamus/obsidian-sync-vault-release/issues/IC6W56)。
-### 0.8.3（2025-05-09）
-- 修改：优化网盘元数据自动同步。
-- 修改：优化设备直连模式。
-### 0.8.2（2025-04-28）
-- 新增：受控模式同步进度显示。
-- 新增：网络异常时，增加提示和自动重试。
-- 新增：受控模式支持一键刷新同步状态。
-### 0.8.1（2025-04-25）
-- 新增：受控模式+百度网盘，支持分段下载。
-- 修改：受控模式优化同步进度显示。
-- 新增：受控模式中断机制。
-### 0.8.0（2025-04-24）
-- 支持设备直连同步。
-### 0.7.5（2025-03-30）
-- 升级修订历史视图，增加修订来源。
-- 生成同步报告。
-- 115网盘内测。
-- 自动冲突合并内测。
-- 修复插件同步路径。
-### 0.7.4（2025-03-22）
-- 优化日志。
-### 0.7.3（2025-03-21）
-- 优化同步算法。
-### 0.7.2（2025-03-20）
-- 优化流控，提升稳定性。
-### 0.7.1（2025-03-18）
-> 建议升级
-- 优化网盘服务接口。
-- 已知问题修复。
-### 0.7.0（2025-03-17）
-> 建议升级
-- 功能：事件触发同步，提高同步实时性。
-- 功能：元数据冲突检测和解决，支持删除、移动、更新事件处理。
-- 优化：同步状态界面，显示上次和下次同步时刻。
-- 优化：提高设置界面加载速度。
-- 修复：
-    - [百度网盘大批量文件下载](https://gitee.com/abcamus/obsidian-sync-vault-release/issues/IBRJ5N)。
-    - 新仓库首次自动同步自动创建远程仓库。
-    - 阿里云盘上传时间戳修改问题。
-### 0.6.3（2025-03-01）
-> 阿里云用户建议升级。
-- 优化：文档加载性能。
-- 优化：阿里云上传流程。
-- 修复：插件下载未自动创建插件文件夹。
-### 0.6.2（2025-02-22）
-> 建议升级。
-- 修复：非合并模式下文件冲突导致内容覆盖。
-- 增强：上传插件增加错误提示。
-### 0.6.1（2025-02-20）
-> 建议升级。
-- 增强：完善语言支持。
-- 修复：已知问题修复。
-### 0.6.0（2025-02-13）
-> 建议升级。**注意：开启加密功能的用户在升级前务必备份好原文，升级完成后重新加密上传。**
-- 支持第三方插件上传和下载。
-- 大幅提升阿里云盘下载速度。
-- 更加稳健的加解密方案。
-### 0.5.10（2025-02-09）
-> 阿里云盘用户必须升级，加密用户建议升级
-- fix：阿里云盘稳定性。
-- enhance：加解密逻辑。
-### 0.5.9（2025-02-02）
-> 建议升级
-- 功能：支持自适应同步周期。
-- 修复：百度网盘时间戳错误。
-### 0.5.8（2025-01-31）
-> 建议升级
-- 提升阿里云盘同步稳定性和性能。
-- 支持正则表达式忽略文件同步。
-### 0.5.7（2025-01-29）
-> 可选升级
-- 功能：支持文件修订历史。
-- 功能：增加快捷键支持，Ctrl+Shift+h，打开文件修订视图。
-### 0.5.6（2025-01-26）
-> 建议升级
-- 修复：受控同步模式下空文件夹不显示远端文件问题。
-- 修复：阿里云盘下载文件的请求间隔，减少403错误。
-- 功能：自动模式增加动态调整同步周期机制。
-### 0.5.5（2025-01-24）
-> 建议升级
-- 修复：自动模式下解密文件问题。
-- 修复：阿里云盘上传时间戳错误导致上传失败问题。
-### 0.5.4（2025-01-23）
-> 可选升级
-- 优化同步性能检测器。
-- 优化文件操作中的API请求。
-### 0.5.3（2025-01-21）
-> 建议升级
-- 新特性：支持onedrive同步。
-- 优化同步状态视图。
-- 修复已知问题。
-### 0.5.2（2025-01-15）
-> 可选升级
-- 减少冗余的rename云盘接口调用。
-- 修复受控模式中可能出现的多层级文件夹状态显示不正确问题。
-### 0.5.1（2025-01-14）
-> 建议升级
-- 自动同步视图中增加停止启动按钮。
-- 设置界面密码支持隐藏和显示。
-### 0.5.0（2025-01-13）
-> 建议升级
-- 新的同步模式：自动模式。
-- 优化了激活流程，免去了设备间拷贝插件的过程。
-- 优化了受控同步模式。
-### 0.4.6（2024-12-25）
-> 可选升级
-- 增加更多的错误日志到日志模式。
-- 新的设置界面。
-### 0.4.5（2024-12-22）
-> 可选升级
-- 增加更多错误记录到日志模式。
-- 优化界面显示。s
-### 0.4.4（2024-12-09）
-> 可选升级
-- 功能：增加日志模式。
-### 0.4.3（2024-12-03）
-> 建议升级
-- 功能：增加一键自动升级。
-- 修复：优化设置界面显示，增加升级和帮助栏；修复授权超时消息提示。
-### 0.4.2（2024-11-29）
-> 可选升级
-- 多语言支持，当前支持英语、中文简体、中文繁体。
-### 0.4.1（2024-11-27）
-> 建议升级。
-- 修复百度网盘搜索文件失败问题。
-- 点击检查更新按钮，自动检查更新并提示下载。
-### 0.4.0（2024-11-15）
-> 阿里云盘用户建议升级。
-- 支持阿里云盘。
-- 自动刷新应用授权。
-- 自动上传体验提升：非加密模式（默认模式）下修改过的文件自动上传，同时打开加密模式后显示加密标识。
-- 问题修复：修复了0.3.4版本在某些平台上本地删除文件未同步到云端的问题。
-### 0.3.4（2024-11-02）
-> 建议所有用户升级。
-- 修复解密过程问题。
-- 扩展授权流程，兼容更多网盘。
-### 0.3.3（2024-10-29）
-> 建议所有用户升级。
-- 修复文件夹上传下载过程中的状态显示问题。
-- 修复删除同步文件问题。
-- 优化移动端界面。
-### 0.3.0（2024-10-27）
-- 优化界面。
-- 在加密模式下，已同步文件修改后自动上传。
-### 0.2.0（2024-10-26）
-- 优化文件夹上传逻辑。
-- 优化加载过程。
-- 一些bugfix。
-### 0.1.1（2024-10-23）
-- 修复：自动下载模式下识别远端新文件。
-### 0.1.0（2024-10-22）
-- 支持Windows、MacOS、Linux平台同步百度网盘。
-- 支持iOS、iPadOS、android同步到百度网盘。
-- 自动检测文件创建、删除、修改、移动。
-- 更名：从Cloud Disk Explorer改为Sync Vault。
-- 优化了UI显示。
+- New cloud services added: Nutstore, Infinicloud, Tencent Cloud Object Storage (COS), KuaKe Cloud Drive.
+- Performance optimization: File scanning speed of Alibaba Cloud Drive increased by approximately 20 times.
+- Interface:
+    - Compatible with Cupertino theme.
+    - More help information provided.
+    - Simplified authorization process.
+- Others:
+    - Automatic reloading of expired video playback URLs for Alibaba Cloud Drive.
+
+### 0.9.1 (2025-07-08)
+
+- Fix: Setting warning and sync mode switch warning.
+
+### 0.9.0 (2025-07-07)
+
+- New feature: Cloud drive browser, supporting online PDF reading and online video playback with a click.
+
+### 0.8.12 (2025-06-19)
+
+- New feature: One-click repository diagnosis.
+- Optimization: Display of sync status in controlled mode.
+
+### 0.8.11 (2025-06-11)
+
+- Optimization: File icons and sync status icons in controlled mode.
+- New feature: Right-click menu for video playback.
+
+### 0.8.10 (2025-06-04)
+
+- New feature: Added plugin sync, theme sync, and hidden file sync in controlled mode.
+- Optimization: Real-time performance of cloud drive sync.
+
+### 0.8.9 (2025-06-03)
+
+- Optimization: Settings interface.
+
+### 0.8.8 (2025-05-30)
+
+- Optimization: WebRTC data channel transmission.
+- Optimization: Simplified settings interface.
+- New feature: Plugin version display in sync report.
+
+### 0.8.7 (2025-05-26)
+
+- New feature: Manual conflict merging and incremental automatic merging.
+- Optimization: Revision history view supports revision deletion.
+
+### 0.8.6 (2025-05-19)
+
+- Fix: Cross-Origin Resource Sharing (CORS) issue.
+
+### 0.8.5 (2025-05-19)
+
+- New feature: Added right-click menu for files in controlled mode.
+- New feature: Supported online video playback for Baidu Cloud Drive and Alibaba Cloud Drive.
+- Fixes:
+    - [IC8K1L](https://gitee.com/abcamus/obsidian-sync-vault-release/issues/IC8K1L)
+    - Sync logs for OneDrive plugin.
+
+### 0.8.4 (2025-05-12)
+
+- New feature: Added right-click menu for navigation bar in controlled mode.
+- New feature: Display of cloud drive storage capacity in sync view under automatic mode.
+- Modification: Partial UI adjustments.
+- Fix: [IC6W56](https://gitee.com/abcamus/obsidian-sync-vault-release/issues/IC6W56).
+
+### 0.8.3 (2025-05-09)
+
+- Modification: Optimized automatic sync of cloud drive metadata.
+- Modification: Optimized device direct-connection mode.
+
+### 0.8.2 (2025-04-28)
+
+- New feature: Sync progress display in controlled mode.
+- New feature: Added prompts and automatic retries when network errors occur.
+- New feature: Supported one-click sync status refresh in controlled mode.
+
+### 0.8.1 (2025-04-25)
+
+- New feature: Supported segmented download for Baidu Cloud Drive in controlled mode.
+- Modification: Optimized sync progress display in controlled mode.
+- New feature: Interruption mechanism in controlled mode.
+
+### 0.8.0 (2025-04-24)
+
+- Supported device direct-connection sync.
+
+### 0.7.5 (2025-03-30)
+
+- Upgraded revision history view, adding revision source information.
+- Generated sync reports.
+- Internal testing for 115 Cloud Drive.
+- Internal testing for automatic conflict merging.
+- Fixed plugin sync path.
+
+### 0.7.4 (2025-03-22)
+
+- Optimization: Logs.
+
+### 0.7.3 (2025-03-21)
+
+- Optimization: Sync algorithm.
+
+### 0.7.2 (2025-03-20)
+
+- Optimization: Flow control to improve stability.
+
+### 0.7.1 (2025-03-18)
+
+> Upgrade recommended
+
+- Optimization: Cloud drive service interface.
+- Fixed known issues.
+
+### 0.7.0 (2025-03-17)
+
+> Upgrade recommended
+
+- Features: Event-triggered sync to improve sync real-time performance.
+- Features: Metadata conflict detection and resolution, supporting handling of deletion, movement, and update events.
+- Optimization: Sync status interface, displaying last and next sync times.
+- Optimization: Improved loading speed of settings interface.
+- Fixes:
+    - [Batch file download for Baidu Cloud Drive](https://gitee.com/abcamus/obsidian-sync-vault-release/issues/IBRJ5N).
+    - Automatic creation of remote repository for first-time auto-sync of new repositories.
+    - Timestamp modification issue for uploads to Alibaba Cloud Drive.
+
+### 0.6.3 (2025-03-01)
+
+> Upgrade recommended for Alibaba Cloud users.
+
+- Optimization: Document loading performance.
+- Optimization: Upload process for Alibaba Cloud Drive.
+- Fix: Plugin folder not automatically created for plugin downloads.
+
+### 0.6.2 (2025-02-22)
+
+> Upgrade recommended.
+
+- Fix: Content overwriting caused by file conflicts in non-merge mode.
+- Enhancement: Added error prompts for plugin uploads.
+
+### 0.6.1 (2025-02-20)
+
+> Upgrade recommended.
+
+- Enhancement: Improved language support.
+- Fix: Fixed known issues.
+
+### 0.6.0 (2025-02-13)
+
+> Upgrade recommended. **Note: Users with encryption enabled must back up original files before upgrading and re-encrypt for upload after the upgrade is complete.**
+
+- Supported upload and download of third-party plugins.
+- Significantly improved download speed for Alibaba Cloud Drive.
+- More robust encryption and decryption solution.
+
+### 0.5.10 (2025-02-09)
+
+> Mandatory upgrade for Alibaba Cloud Drive users; upgrade recommended for users with encryption enabled.
+
+- Fix: Stability of Alibaba Cloud Drive.
+- Enhancement: Encryption and decryption logic.
+
+### 0.5.9 (2025-02-02)
+
+> Upgrade recommended.
+
+- Feature: Supported adaptive sync cycle.
+- Fix: Timestamp error in Baidu Cloud Drive.
+
+### 0.5.8 (2025-01-31)
+
+> Upgrade recommended.
+
+- Improved sync stability and performance for Alibaba Cloud Drive.
+- Supported file sync exclusion via regular expressions.
+
+### 0.5.7 (2025-01-29)
+
+> Optional upgrade.
+
+- Feature: Supported file revision history.
+- Feature: Added shortcut key support (Ctrl+Shift+H) to open file revision view.
+
+### 0.5.6 (2025-01-26)
+
+> Upgrade recommended.
+
+- Fix: Issue where remote files in empty folders were not displayed in controlled sync mode.
+- Fix: Adjusted request intervals for file downloads from Alibaba Cloud Drive to reduce 403 errors.
+- Feature: Added dynamic sync cycle adjustment mechanism in automatic mode.
+
+### 0.5.5 (2025-01-24)
+
+> Upgrade recommended.
+
+- Fix: File decryption issue in automatic mode.
+- Fix: Timestamp error causing upload failures for Alibaba Cloud Drive.
+
+### 0.5.4 (2025-01-23)
+
+> Optional upgrade.
+
+- Optimized sync performance detector.
+- Optimized API requests during file operations.
+
+### 0.5.3 (2025-01-21)
+
+> Upgrade recommended.
+
+- New feature: Supported OneDrive sync.
+- Optimized sync status view.
+- Fixed known issues.
+
+### 0.5.2 (2025-01-15)
+
+> Optional upgrade.
+
+- Reduced redundant "rename" API calls for cloud drives.
+- Fixed issue where folder status display might be incorrect for multi-level folders in controlled mode.
+
+### 0.5.1 (2025-01-14)
+
+> Upgrade recommended.
+
+- Added start/stop button in automatic sync view.
+- Supported password hiding and display in settings interface.
+
+### 0.5.0 (2025-01-13)
+
+> Upgrade recommended.
+
+- New sync mode: Automatic mode.
+- Optimized activation process, eliminating the need to copy plugins between devices.
+- Optimized controlled sync mode.
+
+### 0.4.6 (2024-12-25)
+
+> Optional upgrade.
+
+- Added more error logs to log mode.
+- New settings interface.
+
+### 0.4.5 (2024-12-22)
+
+> Optional upgrade.
+
+- Added more error records to log mode.
+- Optimized interface display.
+
+### 0.4.4 (2024-12-09)
+
+> Optional upgrade.
+
+- Feature: Added log mode.
+
+### 0.4.3 (2024-12-03)
+
+> Upgrade recommended.
+
+- Feature: Added one-click automatic upgrade.
+- Fixes: Optimized settings interface display, added upgrade and help bars; fixed authorization timeout message prompts.
+
+### 0.4.2 (2024-11-29)
+
+> Optional upgrade.
+
+- Multi-language support, currently supporting English, Simplified Chinese, and Traditional Chinese.
+
+### 0.4.1 (2024-11-27)
+
+> Upgrade recommended.
+
+- Fixed file search failure issue in Baidu Cloud Drive.
+- Clicking the "Check for Updates" button automatically checks for updates and prompts for download.
+
+### 0.4.0 (2024-11-15)
+
+> Upgrade recommended for Alibaba Cloud Drive users.
+
+- Supported Alibaba Cloud Drive.
+- Automatic refresh of application authorization.
+- Improved automatic upload experience: Modified files are automatically uploaded in non-encryption mode (default mode), and an encryption indicator is displayed when encryption mode is enabled.
+- Fix: Resolved issue where locally deleted files in version 0.3.4 were not synced to the cloud on some platforms.
+
+### 0.3.4 (2024-11-02)
+
+> Upgrade recommended for all users.
+
+- Fixed decryption process issues.
+- Expanded authorization process to support more cloud drives.
+
+### 0.3.3 (2024-10-29)
+
+> Upgrade recommended for all users.
+
+- Fixed status display issues during folder upload and download.
+- Fixed issue with syncing deleted files.
+- Optimized mobile interface.
+
+### 0.3.0 (2024-10-27)
+
+- Optimized interface.
+- Automatically uploaded modified synced files in encryption mode.
+
+### 0.2.0 (2024-10-26)
+
+- Optimized folder upload logic.
+- Optimized loading process.
+- Some bug fixes.
+
+### 0.1.1 (2024-10-23)
+
+- Fix: Recognition of new remote files in automatic download mode.
+
+### 0.1.0 (2024-10-22)
+
+- Supported Baidu Cloud Drive sync on Windows, macOS, and Linux.
+- Supported Baidu Cloud Drive sync on iOS, iPadOS, and Android.
+- Automatically detected file creation, deletion, modification, and movement.
+- Renamed: From Cloud Disk Explorer to Sync Vault.
+- Optimized UI display.

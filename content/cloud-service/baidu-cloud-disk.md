@@ -1,14 +1,18 @@
 ---
-title: 百度网盘
+title: Baidu Netdisk
 ---
-## 授权
-<img src="/img/auth-button.png" alt="网盘授权" width="75%" style="display: block; margin: 0 auto;">
+## Authorization
 
-点击上述授权按扭进入授权流程，在打开的网页中登陆百度网盘。
+<img src="/img/auth-button.png" alt="Cloud Disk Authorization" width="75%" style="display: block; margin: 0 auto;">
 
-> [!tip] 不会跳到登陆界面的情况：插件会检查当前网盘授权情况，如果已经授权且授权为到期，则按扭会转变为“取消授权”。百度网盘单次授权有效期是30天。
+Click the above **Authorization Button** to start the authorization process, then log in to your Baidu Netdisk account on the opened webpage.
 
-**授权成功** 后会跳转到 [快速问答页面](https://kqiu.top/welcome-to-sync-vault/)，现在就可以使用百度网盘了。
-## 取消应用授权
-<img src="/img/cancel-baidu-auth.png" alt="取消百度网盘授权" width="75%" style="display: block; margin: 0 auto;">
-进入百度网盘个人中心，在授权管理中找到sync vault，点击可取消授权。
+> [!tip] Scenario where no login page redirects: The plugin checks the current cloud disk authorization status. If authorization is already active and not expired, the button will change to "Cancel Authorization". A single authorization for Baidu Netdisk is valid for 30 days.
+
+After **successful authorization**, you will be redirected to the [Quick Q&A Page](https://kqiu.top/welcome-to-sync-vault/), and you can start using Baidu Netdisk now.
+
+## Cancel App Authorization
+
+<img src="/img/cancel-baidu-auth.png" alt="Cancel Baidu Netdisk Authorization" width="75%" style="display: block; margin: 0 auto;">
+
+Go to the Baidu Netdisk **Personal Center**, find "Sync Vault" in the **Authorization Management** section, and click to cancel the authorization.

@@ -1,13 +1,14 @@
 ---
-title: 加密
+title: End-to-End Encryption
 tags:
-  - Obsidian同步
-  - 加密
+  - AES-GCM
+  - SyncVault
 ---
-Sync Vault支持 AES GCM加密算法进行端到端加密，打开加密后，您的文件将以密文形式存储在 [[cloud-service/index|云存储]] 中。
-> [!important] 请妥善保管密钥，Sync Vault不会备份您的密钥信息。
+Sync Vault supports end-to-end encryption using the **AES GCM encryption algorithm**. Once encryption is enabled, your files will be stored as ciphertext in [[cloud-service/index|cloud storage]].
 
-在插件设置中，选择`Encryption setting`页签，点击开关启用后，输入密码。
-<img src="/img/encryption-setting.png" alt="端到端加密" width="75%">
+> [!important] Please keep your key safe. Sync Vault does not back up your key information.
 
-> 在其他设备中需设置同样的密码，否则将无法下载。
+In the plugin settings, select the `Encryption Setting` tab, click the toggle to enable encryption, then enter your password.<img src="/img/encryption-setting.png" alt="End-to-End Encryption" width="75%">
+
+> [!important] The **same password** must be set on other devices; otherwise, files cannot be downloaded.
+

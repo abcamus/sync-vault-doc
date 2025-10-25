@@ -1,3 +1,3 @@
 ---
-title: 同步对象
+title: Sync Target
 ---

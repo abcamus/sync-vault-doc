@@ -1,19 +1,18 @@
 ---
-title: 同步报告
+title: Runtime Report
 tags:
-  - Obsidian同步
-  - 同步报告
+  - AutoSync
+  - SyncVault
 ---
-在自动同步模式中，Sync Vault能够记录最近一次同步的详细信息，用户可以基于同步报告诊断当前同步中遇到错误的原因。
+In Auto Sync mode, Sync Vault can record detailed information about the most recent synchronization. Users can diagnose the causes of errors encountered during the current synchronization using the sync report.
 
-**第一步：打开报告开关**
-查看同步报告前需要先打开报告开关：进入【帮助与更新】设置页签，找到“日志模式”按钮，点击打开。
+**Step 1: Enable the Report Toggle**Before viewing the sync report, you need to enable the report toggle first: Go to the **Help & Updates** settings tab, find the "Log Mode" button, and click to turn it on.
 
-**第二步：查看报告**
-有两种方式可以查看同步报告：
-1. 点击日志模式开关旁边的查看日志按钮。
-2. 在自动同步视图中，点击[[auto-mode#查看同步报告|查看同步报告]]按钮。
-在自动同步视图中，点击[打开同步报告](#查看同步报告)，即可查看同步报告。
+**Step 2: View the Report**There are two ways to view the sync report:
 
-<!-- ![同步报告](/img/sync-vault-report.png) -->
-<img src="/img/sync-vault-report.png" alt="同步报告" width="75%">
+1. Click the "View Logs" button next to the Log Mode toggle.
+2. In the Auto Sync view, click the [[auto-mode# 查看同步报告 | View Sync Report]] button.
+    
+    In the Auto Sync view, click [Open Sync Report](https://www.doubao.com/chat/26013069559978498#%E6%9F%A5%E7%9C%8B%E5%90%8C%E6%AD%A5%E6%8A%A5%E5%91%8A) to view the sync report.
+
+<img src="/img/sync-vault-report.png" alt="Sync Report" width="75%">
