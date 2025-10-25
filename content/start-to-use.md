@@ -18,13 +18,18 @@ Download the vault directory from the link below👇🏻Link: [https://pan.baid
 
 ## Manual Installation
 
+**Step 1:** install `Sync Vault CE` from Obsidian Plugin Market.
+![[sync vault ce.png]]
+**Step 2:** Upgrade to PRO version
+![[Upgrade Sync Vault.png]]
+**Step 3:** Setup
 1. Navigate to the plugin settings page.
 2. Click the "Get Started" tab.
 3. Click the "Start Authorization" button and follow the on-screen instructions to complete cloud disk authorization.
 
-For detailed steps on installation, activation, and cloud disk authorization, [click here to view](https://kqiu.top/sync-vault-user-mannual-040/). The interface after successful setup is shown in the image below:
+The interface after successful setup is shown in the image below:
+![[sync vault activation.png]]
 
-![[sync-vault-activation.png]]
 
 > [!note] Click [here](https://kqiu.top/product/sync-vault/) to obtain an activation code
 
