@@ -1,5 +1,5 @@
 ---
-title: Start to use
+title: Start to Use
 tags:
   - syncvault
   - installation
