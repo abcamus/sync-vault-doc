@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Sync Vault",
+    pageTitle: "Sync Vault Doc",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -24,9 +24,9 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: "Inter",
+        body: "Inter",
+        code: "JetBrains Mono",
       },
       colors: {
         lightMode: {
@@ -35,9 +35,10 @@ const config: QuartzConfig = {
           gray: "#cccbc8",       // --bg-300
           darkgray: "#313d44",   // --text-200
           dark: "#1d1c1c",       // --text-100
-          secondary: "#00668c",   // --accent-200
-          tertiary: "#71c4ef",   // --accent-100
-          highlight: "#d4eaf7",   // --primary-100
+          secondary: "rgb(138, 92, 245)",   // --accent-200
+          tertiary: "rgb(138, 92, 245)",   // --accent-100
+          // highlight: "#d4eaf7",   // --primary-100
+          highlight: "transparent",
           textHighlight: "#b6ccd8", // --primary-200
         },
         darkMode: {
@@ -46,10 +47,10 @@ const config: QuartzConfig = {
           gray: "#383840",
           darkgray: "#d4d4d4",
           dark: "#ebebec",
-          secondary: "#00668c",   // 保持与浅色主题相同的强调色
-          tertiary: "#71c4ef",    // 保持与浅色主题相同的强调色
-          highlight: "#3b3c3d",    // --primary-300
-          textHighlight: "#b6ccd8", // --primary-200
+          secondary: "rgb(166, 138, 249)",   // 保持与浅色主题相同的强调色
+          tertiary: "rgb(166, 138, 249)",    // 保持与浅色主题相同的强调色
+          highlight: "transparent",    // --primary-300
+          textHighlight: "#38a0d7ff", // --primary-200
         },
       },
     },

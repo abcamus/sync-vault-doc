@@ -8,12 +8,15 @@ date: 2025-10-02
 ---
 # Frequently Asked Questions (FAQs)
 
-1. **Cloud Drive Authorization Failure**Check if a network proxy is enabled. Alternatively, open the terminal and refer to [[#View Terminal Error Logs]].
-    
-2. **No Files Synced to New Devices & No Repository Folder on Cloud Drive**Verify if the repository name is valid. For details on Baidu Cloud Drive filename symbol restrictions, see [this link](https://www.zhihu.com/question/401747378).
-    
+1. **Cloud Drive Authorization Failure**
+	
+	Check if a network proxy is enabled. Alternatively, open the terminal and refer to [[#View Terminal Error Logs]].
+	
+2. **No Files Synced to New Devices & No Repository Folder on Cloud Drive**
+	
+	Verify if the repository name is valid. For details on Baidu Cloud Drive filename symbol restrictions, see [this link](https://www.zhihu.com/question/401747378).
+	
 3. **Partial File Sync Failure**
-    
     1. Check if the file path contains emojis—emojis are considered invalid characters.
     2. In Automatic Mode, sync failures may occur due to network changes. The system will automatically retry in the next sync cycle.
     3. Try switching to Controlled Mode for manual sync. If manual sync still fails, submit an issue on [Github](https://github.com/abcamus/obsidian-sync-vault-ce) or [Gitee](https://gitee.com/abcamus/obsidian-sync-vault-release), or discuss it in the community group.

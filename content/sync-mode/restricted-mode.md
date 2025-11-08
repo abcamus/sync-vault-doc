@@ -4,7 +4,7 @@ tags:
   - SyncVault
   - ManualSync
 ---
-After completing [[start-to-use|Getting Started]], click the cloud icon (sidebar <i class="fas fa-cloud"></i> on PC, or find the <i class="fas fa-cloud"></i> icon in the bottom hamburger menu <i class="fa fa-bars"></i> on mobile) to open the sync control view.
+After completing [[getting-started|Getting Started]], click the cloud icon (sidebar <i class="fas fa-cloud"></i> on PC, or find the <i class="fas fa-cloud"></i> icon in the bottom hamburger menu <i class="fa fa-bars"></i> on mobile) to open the sync control view.
 
 <img src="/img/obsidian-sync-vault-restricted-mode.jpg" alt="restricted mode view" width="75%">
 

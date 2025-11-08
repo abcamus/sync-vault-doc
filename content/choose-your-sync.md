@@ -1,5 +1,5 @@
 ---
-title: Obsidian Sync Solutions
+title: Choose a sync solution
 tags:
   - remotelysave
   - syncthing

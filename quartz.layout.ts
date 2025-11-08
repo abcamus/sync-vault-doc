@@ -18,7 +18,7 @@ export const sharedPageComponents: SharedLayout = {
         // from data-category-id
         categoryId: 'DIC_kwDOQCGoDs4Cwn9c',
         // from data-lang
-        lang: 'zh-CN'
+        lang: 'zh-CN',
       }
     }),
   ],

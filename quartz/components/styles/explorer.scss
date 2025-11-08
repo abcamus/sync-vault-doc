@@ -124,6 +124,9 @@ button.desktop-explorer {
       color: var(--dark);
       opacity: 0.75;
       pointer-events: all;
+      &:hover {
+        color: var(--darkgray);
+      }
 
       &.active {
         opacity: 1;
@@ -157,7 +160,7 @@ button.desktop-explorer {
   user-select: none;
 
   & div > a {
-    color: var(--secondary);
+    color: var(--dark);
     font-family: var(--headerFont);
     font-size: 0.95rem;
     font-weight: $semiBoldWeight;
@@ -195,7 +198,7 @@ button.desktop-explorer {
 
 .folder-icon {
   margin-right: 5px;
-  color: var(--secondary);
+  color: var(--dark);
   cursor: pointer;
   transition: transform 0.3s ease;
   backface-visibility: visible;

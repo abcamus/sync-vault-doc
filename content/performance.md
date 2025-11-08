@@ -1,5 +1,5 @@
 ---
-title: How to Measure Performance
+title: Synchronization Performance
 tags:
   - performance
   - syncvault
@@ -35,15 +35,15 @@ Below are typical values from a single test scenario. You can also test performa
 > - Number of files in the vault: 500
 > - Network bandwidth: 100M
 
-|Cloud Disk|API Latency|Upload Speed|Download Speed|Multi-Device Concurrency|
-|---|---|---|---|---|
-|Baidu Netdisk|~300ms|~2MB/s–3MB/s|~80KB/s (non-member), ~2MB/s (member)|Speed decreases when 3+ devices are online|
-|Alibaba Cloud Disk|~5s|~2MB/s–3MB/s|Similar to Baidu Netdisk|Same as above|
-|OneDrive|~2s|~2MB/s|~2MB/s|Similar to Baidu Netdisk|
+| Cloud Disk         | API Latency | Upload Speed | Download Speed                  | Multi-Device Concurrency                   |
+| ------------------ | ----------- | ------------ | ------------------------------- | ------------------------------------------ |
+| Baidu Netdisk      | ~300ms      | ~2MB/s–3MB/s | ~80KB/s (non-vip), ~2MB/s (vip) | Speed decreases when 3+ devices are online |
+| Alibaba Cloud Disk | ~5s         | ~2MB/s–3MB/s | Similar to Baidu Netdisk        | Same as above                              |
+| OneDrive           | ~2s         | ~2MB/s       | ~2MB/s                          | Similar to Baidu Netdisk                   |
 
 ### Real-Time Synchronization
 
-Real-time synchronization relies on direct device-to-device connections. If direct connection fails, data is relayed via a [[sync vault/build your turn server/index# 什么是 TURN 服务器？|TURN server]]. Therefore, **the worst-case performance occurs during TURN server relay, where capabilities are limited by the relay server**.
+Real-time synchronization relies on direct device-to-device connections. If direct connection fails, data is relayed via a [[turn-server|TURN server]]. Therefore, **the worst-case performance occurs during TURN server relay, where capabilities are limited by the relay server**.
 
 #### Direct Connection
 
