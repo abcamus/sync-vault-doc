@@ -1,5 +1,5 @@
 ---
-title: ChangeLog
+title: Changelog
 tags:
   - syncvault
   - changelog

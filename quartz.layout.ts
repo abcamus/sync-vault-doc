@@ -24,8 +24,8 @@ export const sharedPageComponents: SharedLayout = {
   ],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/abcamus/obsidian-sync-vault-ce",
-      "QQ": "https://qm.qq.com/cgi-bin/qm/qr?k=1023835978",
+      // GitHub: "https://github.com/abcamus/obsidian-sync-vault-ce",
+      // "QQ": "https://qm.qq.com/cgi-bin/qm/qr?k=1023835978",
     },
   }),
 }

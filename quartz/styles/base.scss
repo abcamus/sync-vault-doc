@@ -234,6 +234,9 @@ a {
       z-index: 1;
       grid-area: grid-sidebar-left;
       flex-direction: column;
+      border-right: 1px solid #e0e0e0;
+      padding-right: 16px;
+      margin-right: 16px;
       @media all and ($mobile) {
         gap: 0;
         align-items: center;
