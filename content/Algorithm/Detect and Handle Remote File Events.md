@@ -158,7 +158,7 @@ flowchart LR
 4. **Cleanup**: Reset temporary states and prepare for the next sync cycle.
 
 This file-level conflict resolution mechanism enables reliable sync across storage-only cloud services. For finer-grained collaboration (e.g., real-time co-editing), advanced techniques like CRDTs are required. Sync Vault implements CRDTs to bring collaborative editing to Obsidian—stay tuned for our next article!
-## Footnotes
+
 [^1]: Conflict occurs if files are moved to different paths; both versions are preserved if conflicting. No conflict if moved to the same path.
 [^2]: Local file is preserved (priority to local changes).
 [^3]: Local deletion is overwritten; cloud file is downloaded (priority to cloud changes for modify events).
