@@ -58,6 +58,13 @@ export default ((opts?: Partial<BreadcrumbOptions>) => {
       return null
     }
 
+    // Handle 'zh' specific logic: flatten hierarchy
+    const isZh = fileData.slug?.startsWith("zh/") || fileData.slug === "zh"
+    if (isZh && pathNodes.length > 1) {
+      pathNodes.shift() // Remove global root
+      options.rootName = "首页" // Localize root name
+    }
+
     const crumbs: CrumbData[] = pathNodes.map((node, idx) => {
       const crumb = formatCrumb(node.displayName, fileData.slug!, simplifySlug(node.slug))
       if (idx === 0) {

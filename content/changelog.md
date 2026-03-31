@@ -2,332 +2,452 @@
 title: Changelog
 tags:
   - syncvault
-  - changelog
+  - Changelog
 date: 2025-10-03
 created: 2025-01-01
 ---
-### 1.0.0 (2025-10-22, oracle-shell)
 
-- New cloud services added: Nutstore, Infinicloud, Tencent Cloud Object Storage (COS), KuaKe Cloud Drive.
-- Performance optimization: File scanning speed of Alibaba Cloud Drive increased by approximately 20 times.
-- Interface:
+## Major Milestones
+
+| Version | Core Breakthroughs | Impact |
+| :--- | :--- | :--- |
+| **v1.12.x** | **VFS (Virtual File System)** | "On-Demand Sync" era begins, instant access to massive data |
+| **v1.10.x** | **MCP AI Integration** | Knowledge vaults become AI's energy source |
+| **v1.0.x** | **Official Release** | Commercial readiness, supporting top 5 cloud providers |
+| **v0.8.x** | **Live Sync & Video** | Real-time collaboration and cloud media streaming |
+
+## Recent Updates
+
+### 1.12.8 (20260331)
+- Added: 3 Baidu Netdisk MCP tools: semantic search, file sharing, and upload via URL.
+- Added: Video notes click timestamp to jump to video position.
+- Optimized: Real-time sync control flow and interface.
+
+### 1.12.4 (20260326)
+- Fixed: Locale and typo issues.
+
+### 1.12.3 (20260325)
+- Fixed: Controlled mode panel cannot be opened.
+- Fixed: Dashboard sync status not auto-refreshed after sync ends.
+
+### 1.12.2 (20260324)
+#### Sync
+- Added: VFS (Virtual File System), auto-sync only syncs directory structure, opening files on demand.
+- Added: 1+N hybrid sync, combining cloud backup and real-time collaboration to improve multi-device experience.
+#### Image
+- Added: Zoom in, zoom out, and reset buttons.
+#### UI
+- Optimized: Real-time sync control dashboard shows editing status of collaborators and cloud sync status in real time.
+
+### 1.10.6 (20260317)
+#### MCP
+- Added: MCP server toolcall adds creating, deleting, moving, downloading, and uploading cloud files.
+- Added: MCP setting write control switch.
+- Optimized: MCP atomization, combined with `sync-vault-skills` to improve model capabilities.
+- Optimized: `list_cloud_files` and `search_cloud_files` support pagination.
+#### Video Playback
+- Added: Web display and speed control playback.
+- Fixed: Quark Cloud Drive m3u8 video playback.
+- Optimized: Pause/play interface.
+- Optimized: Baidu Netdisk video multi-resolution selection.
+#### Image
+- Added: Image preview supports rotation.
+#### Sync
+- Ignore files: `.tmp` files.
+- Optimized: Quark Cloud Drive cookie failure prompt.
+- Optimized: Collaboration info display unified in the dashboard.
+
+### 1.10.1 (20260307)
+- Fixed: Compatibility with Obsidian 1.12 and Aliyun Drive video playback.
+- Added: MCP server supports getting cloud file links.
+- Added: MCP server supports getting cloud file video code blocks.
+
+### 1.10.0 (20260301)
+- Added: MCP server.
+- Fixed: Baidu Netdisk video playback on mobile.
+
+<details>
+<summary>View Archived History (v1.0.0 to v1.9.2)</summary>
+
+## v1.0 (since 2025-10-22, oracle-shell)
+
+### 1.0.0 (20251022)
+
+- Added cloud services: Nutstore, InfiniCloud, Tencent Cloud Object Storage (COS), Quark Cloud Drive.
+- Performance optimization: Aliyun Drive file scanning speed improved by about 20x.
+- UI:
     - Compatible with Cupertino theme.
     - More help information provided.
     - Simplified authorization process.
 - Others:
-    - Automatic reloading of expired video playback URLs for Alibaba Cloud Drive.
+    - Auto-reload when Aliyun Drive video playback link expires.
+
+### 1.0.1 (20251027)
+- Fixed: 31066 error when opening Baidu Netdisk dashboard after activating a new vault for the first time.
+- Fixed: Baidu Netdisk still prompts failure after unlocking Pro for a new vault.
+- Fixed: Upload cancelled warning when switching from auto mode to controlled mode.
+
+### 1.0.2 (20251102)
+- Fixed: Font issue in online PDF preview, occasional failure to open some PDFs.
+- Fixed: View not refreshed after deleting hidden files in controlled mode.
+- Fixed: Incomplete file display for Aliyun Drive in controlled mode.
+- Optimized: Quark Cloud Drive file indexing speed.
+- Added: Open cloud PDF via built-in PDF reader (also supports PDF Plus plugin).
+- Added: Web real-time sync supports showing current cursor via awareness.
+- Added: Kanban settings button to open Sync Vault settings.
+
+### 1.0.3 (20251107)
+- Optimized: Added fingerprint mechanism for cloud auto-sync.
+- Optimized: 115 Cloud Drive PDF reading experience.
+- Fixed: Real-time sync – read-only / read-write buttons did not correctly recognize permissions.
+- Fixed: Dashboard cloud file count did not include hidden files.
+
+### 1.0.4 (20251116)
+- Optimized: File browser shows thumbnails.
+- Optimized: Cloud drive re-authorization mechanism.
+- Fixed: Event not properly preprocessed when renaming folders.
+
+### 1.0.5 (20251122)
+- Optimized: File event handling.
+- Added: Onboarding guide interface.
+- Added: Support for online MP3 playback on Baidu Netdisk.
+
+### 1.0.6 (20251130)
+- Fixed: Large file upload errors for Baidu Netdisk and OneDrive.
+- Optimized: 31304 error prompt for Baidu video playback.
+- Added: One-click copy file path in file browser.
+
+### 1.0.7 (20251205)
+- Fixed: 'local file is null' during file merge, local file not saved.
+- Optimized: Simplified Tencent COS configuration.
+- Optimized: Kanban display.
+- Optimized: Auto-sync delay.
+
+### 1.2.0 (20251216)
+- Added: '@' command quick search for Aliyun Drive.
+- Added: Auto-sync plugins and themes.
+- Added: One-way sync in auto mode.
+- Added: Restore files deleted by deleteLocal event.
+- Added: Quark Cloud Drive support in My Cloud Drive.
+- Added: File filtering in cloud drive browser.
+- Improved: File browser right-click menu, one-click copy video code block, show file info.
+- Optimized: File event management.
+
+### 1.3.0 (20251222)
+- Real-time sync & collaborative editing v2.
+- Sync status stored in IndexedDB.
+
+### 1.3.1 (20251223)
+- Optimized: Unified event management for cloud sync and real-time sync.
+- Fixed: Directory real-time sync.
+
+### 1.3.2 (20251228)
+- Optimized: File revision history display.
+- Optimized: Upgraded Obsidian dependency to 1.10.2.
+- Optimized: Kanban real-time activity card replaced auto-sync status view.
+
+### 1.4.0 (20251230)
+- Added: Support for custom cloud file paths.
+- Added: Delete file/folder support in right-click menu of My Resources browser.
+
+### 1.5.0 (20260107)
+- Fixed: DB not adapted for multi-cloud vaults.
+- Fixed: Tencent COS not adapted for multi-cloud vaults.
+- Fixed: Inconsistent time precision in event manager.
+- Optimized: Real-time sync kanban shows current editing position.
+- Optimized: Real-time sync kanban shows current shared files.
+- Optimized: Activity log shows more details.
+- Optimized: Improved sync stop efficiency.
+
+### 1.5.1 (20260111)
+- Added: Online WMA audio playback.
+- Added: Video resolution control.
+- Added: Subtitle support.
+
+### 1.5.2 (20260112)
+- Added: Load subtitles via video right-click menu.
+- Optimized: Clean up invalid logs.
+
+### 1.5.3 (20260116)
+- Added: Insert cloud file links into notes.
+- Optimized: Baidu Netdisk error messages.
+- Optimized: Aliyun Drive cache usage efficiency.
+
+### 1.5.4 (20260117)
+- Added: PDF reading support for OneDrive.
+- Added: Audio & video playback support for OneDrive.
+- Added: Insert OneDrive hyperlinks into notes.
+- Added: Hover preview for OneDrive hyperlinks.
+- Added: OneDrive resources show thumbnails in cloud resource browser.
+- Fixed: OneDrive patch for large files returns 204 status.
+
+### 1.5.5 (20260119)
+- Added: File rename support in cloud browser right-click menu.
+- Added: Original quality playback for 115 Cloud Drive audio & video.
+- Fixed: OneDrive Patch returns 204.
+
+### 1.5.6 (20260120)
+- Added: Sort button in cloud drive browser toolbar.
+- Optimized: Show Quark Cloud Drive VIP level.
+- Optimized: Audio album cover uses cloud drive native cover first.
+- Fixed: 115 Cloud Drive file rename.
+- Fixed: 31066 error on first sync with Baidu Netdisk.
+
+### 1.5.7 (20260121)
+- Fixed: HTTP2_PROTOCOL_ERROR when uploading large files to OneDrive.
+- Optimized: Refresh token frequency, reduce authorization expiration prompts.
+- Added: Sort by files first / folders first in cloud browser.
+
+### 1.5.8 (20260122)
+- Fixed: Quark & WebDAV incorrectly triggering OAuth interface.
+- Fixed: OneDrive large file last chunk boundary calculation error.
+- Optimized: Real-time sync sharing mechanism:
+    - New files do not trigger sharing by default.
+    - Opening files does not trigger sharing by default.
+    - Only files marked as shared sync in real time when changed.
+
+### 1.6.0 (20260123)
+- Added: Aliyun Drive audio playback.
+- Added: Open images online.
+- Added: One-click open cloud markdown/txt/excel.
+- Optimized: Various prompts.
+
+### 1.7.0 (20260127)
+- Fixed: #10.
+- Optimized: Image online preview supports SVG.
+- Added: "Open in Cloud Drive" in file right-click menu.
+- Added: Support inserting cloud images using `![]()` syntax.
+- Added: Support cloud text files using `![]()` syntax.
+
+### 1.7.1 (20260129)
+- Added: Image preview and insert support for Quark Cloud Drive.
+- Optimized: Hidden file sync and ignore file mechanism.
+- Optimized: Auto-refresh preview images.
+
+### 1.8.0 (20260202)
+- Added: Playlist support.
+- Added: "Convert Link" in file right-click menu.
+
+### 1.8.1 (20260203)
+- Fixed: Duplicate display of embedded cloud links in callouts.
+- Fixed: Right-click menu trigger on mobile files.
+- Fixed: 403 error when playing Aliyun Drive videos on iOS.
+- Fixed: Button display in iOS music player.
+- Optimized: Mobile cloud drive file browser UI.
+- Optimized: Embedded cloud text files in reading mode.
+
+### 1.8.2 (20260204)
+- Fixed: Quark Cloud Drive `ha3 start exceed` error.
+- Optimized: More file extension support.
+- Optimized: Playlist loop playback.
+- Added: Support embedding Quark Cloud Drive text files.
+
+### 1.9.0 (20260206)
+- Fixed: Embedded cloud resources not adapted to source mode.
+- Fixed: Hover not showing for links in tables.
+- Fixed: Wrong text prompt in subtitle selector.
+- Fixed: Redundant empty folders during OneDrive sync.
+- Optimized: PDF viewer close process.
+- Optimized: Preview control via Cmd/Ctrl.
+- Added: Quark Cloud Drive online PDF reading support.
+- Added: Quark Cloud Drive video playback on PC.
+- Added: Command: "Convert local links to cloud links".
+
+### 1.9.1 (20260209)
+- Optimized: Batch image preview.
+- Optimized: Drag cloud files to local.
+
+### 1.9.2 (20260213)
+- Fixed: Memory issue with large file downloads on mobile.
+- Fixed: Unicode encoding issues.
+- Optimized: Redundant sync logs.
+- Added: Vinyl music player.
+
+</details>
+
+<details>
+<summary>View Beta History (v0.5.6 to v0.9.1)</summary>
 
 ### 0.9.1 (2025-07-08)
 
-- Fix: Setting warning and sync mode switch warning.
+- Fixed: Settings warning and sync mode switch warning.
 
 ### 0.9.0 (2025-07-07)
 
-- New feature: Cloud drive browser, supporting online PDF reading and online video playback with a click.
+- Feature: Cloud drive browser, supporting online PDF reading and one-click online video playback.
 
 ### 0.8.12 (2025-06-19)
 
-- New feature: One-click repository diagnosis.
-- Optimization: Display of sync status in controlled mode.
+- Feature: One-click vault diagnosis.
+- Optimized: Sync status display in restricted mode.
 
 ### 0.8.11 (2025-06-11)
 
-- Optimization: File icons and sync status icons in controlled mode.
-- New feature: Right-click menu for video playback.
+- Optimized: File icons and sync status icons in restricted mode.
+- Feature: Video playback right-click menu.
 
 ### 0.8.10 (2025-06-04)
 
-- New feature: Added plugin sync, theme sync, and hidden file sync in controlled mode.
-- Optimization: Real-time performance of cloud drive sync.
+- Feature: Added plugin sync, theme sync, and hidden file sync in restricted mode.
+- Optimized: Real-time performance of cloud drive sync.
 
 ### 0.8.9 (2025-06-03)
 
-- Optimization: Settings interface.
+- Optimized: Settings interface.
 
 ### 0.8.8 (2025-05-30)
 
-- Optimization: WebRTC data channel transmission.
-- Optimization: Simplified settings interface.
-- New feature: Plugin version display in sync report.
+- Optimized: WebRTC data channel transmission.
+- Optimized: Simplified settings interface.
+- Feature: Show plugin versions in sync report.
 
 ### 0.8.7 (2025-05-26)
 
-- New feature: Manual conflict merging and incremental automatic merging.
-- Optimization: Revision history view supports revision deletion.
+- Feature: Manual conflict merge and incremental auto-merge.
+- Optimized: Delete versions in version history view.
 
 ### 0.8.6 (2025-05-19)
 
-- Fix: Cross-Origin Resource Sharing (CORS) issue.
+- Fixed: Cross-Origin Resource Sharing (CORS) issues.
 
 ### 0.8.5 (2025-05-19)
 
-- New feature: Added right-click menu for files in controlled mode.
-- New feature: Supported online video playback for Baidu Cloud Drive and Alibaba Cloud Drive.
-- Fixes:
+- Feature: Added file right-click menu in restricted mode.
+- Feature: Support online video playback for Baidu Netdisk and Aliyun Drive.
+- Fixed:
     - [IC8K1L](https://gitee.com/abcamus/obsidian-sync-vault-release/issues/IC8K1L)
-    - Sync logs for OneDrive plugin.
+    - OneDrive plugin sync logs.
 
 ### 0.8.4 (2025-05-12)
 
-- New feature: Added right-click menu for navigation bar in controlled mode.
-- New feature: Display of cloud drive storage capacity in sync view under automatic mode.
-- Modification: Partial UI adjustments.
-- Fix: [IC6W56](https://gitee.com/abcamus/obsidian-sync-vault-release/issues/IC6W56).
+- Feature: Added navbar right-click menu in restricted mode.
+- Feature: Show cloud storage capacity in auto-sync view.
+- Changed: Partial UI adjustments.
+- Fixed: [IC6W56](https://gitee.com/abcamus/obsidian-sync-vault-release/issues/IC6W56).
 
 ### 0.8.3 (2025-05-09)
 
-- Modification: Optimized automatic sync of cloud drive metadata.
-- Modification: Optimized device direct-connection mode.
+- Changed: Optimized automatic cloud metadata sync.
+- Changed: Optimized device direct-connect mode.
 
 ### 0.8.2 (2025-04-28)
 
-- New feature: Sync progress display in controlled mode.
-- New feature: Added prompts and automatic retries when network errors occur.
-- New feature: Supported one-click sync status refresh in controlled mode.
+- Feature: Sync progress display in restricted mode.
+- Feature: Prompt and auto-retry on network errors.
+- Feature: One-click refresh sync status in restricted mode.
 
 ### 0.8.1 (2025-04-25)
 
-- New feature: Supported segmented download for Baidu Cloud Drive in controlled mode.
-- Modification: Optimized sync progress display in controlled mode.
-- New feature: Interruption mechanism in controlled mode.
+- Feature: Baidu Netdisk segmented download in restricted mode.
+- Changed: Optimized sync progress display in restricted mode.
+- Feature: Interruption mechanism in restricted mode.
 
 ### 0.8.0 (2025-04-24)
 
-- Supported device direct-connection sync.
+- Support device direct-connect sync.
 
 ### 0.7.5 (2025-03-30)
 
-- Upgraded revision history view, adding revision source information.
-- Generated sync reports.
-- Internal testing for 115 Cloud Drive.
-- Internal testing for automatic conflict merging.
+- Upgraded version history view, added version source info.
+- Generate sync reports.
+- 115 Cloud Drive closed beta.
+- Auto conflict merge closed beta.
 - Fixed plugin sync path.
 
 ### 0.7.4 (2025-03-22)
 
-- Optimization: Logs.
+- Optimized: Logs.
 
 ### 0.7.3 (2025-03-21)
 
-- Optimization: Sync algorithm.
+- Optimized: Sync algorithm.
 
 ### 0.7.2 (2025-03-20)
 
-- Optimization: Flow control to improve stability.
+- Optimized: Flow control for improved stability.
 
 ### 0.7.1 (2025-03-18)
 
 > Upgrade recommended
 
-- Optimization: Cloud drive service interface.
+- Optimized: Cloud service interface.
 - Fixed known issues.
 
 ### 0.7.0 (2025-03-17)
 
 > Upgrade recommended
 
-- Features: Event-triggered sync to improve sync real-time performance.
-- Features: Metadata conflict detection and resolution, supporting handling of deletion, movement, and update events.
-- Optimization: Sync status interface, displaying last and next sync times.
-- Optimization: Improved loading speed of settings interface.
-- Fixes:
-    - [Batch file download for Baidu Cloud Drive](https://gitee.com/abcamus/obsidian-sync-vault-release/issues/IBRJ5N).
-    - Automatic creation of remote repository for first-time auto-sync of new repositories.
-    - Timestamp modification issue for uploads to Alibaba Cloud Drive.
+- Feature: Event-triggered sync for improved real-time performance.
+- Feature: Metadata conflict detection and resolution, supporting delete, move, and update events.
+- Optimized: Sync status UI, show last and next sync time.
+- Optimized: Improved settings interface loading speed.
+- Fixed:
+    - Baidu Netdisk batch file download.
+    - Auto-create remote vault on first auto-sync for new vault.
+    - Aliyun Drive upload timestamp modification.
 
 ### 0.6.3 (2025-03-01)
 
-> Upgrade recommended for Alibaba Cloud users.
+> Aliyun Drive users recommended to upgrade.
 
-- Optimization: Document loading performance.
-- Optimization: Upload process for Alibaba Cloud Drive.
-- Fix: Plugin folder not automatically created for plugin downloads.
+- Optimized: Document loading performance.
+- Optimized: Aliyun Drive upload flow.
+- Fixed: Plugin folder not auto-created during plugin download.
 
 ### 0.6.2 (2025-02-22)
 
 > Upgrade recommended.
 
-- Fix: Content overwriting caused by file conflicts in non-merge mode.
-- Enhancement: Added error prompts for plugin uploads.
+- Fixed: File overwrite caused by conflicts in non-merge mode.
+- Improved: Added plugin upload error prompt.
 
 ### 0.6.1 (2025-02-20)
 
 > Upgrade recommended.
 
-- Enhancement: Improved language support.
-- Fix: Fixed known issues.
+- Improved: Improved language support.
+- Fixed: Fixed known issues.
 
 ### 0.6.0 (2025-02-13)
 
-> Upgrade recommended. **Note: Users with encryption enabled must back up original files before upgrading and re-encrypt for upload after the upgrade is complete.**
+> Upgrade recommended. **Note: Users with encryption enabled must back up original files before upgrading, and re-encrypt & upload after upgrade.**
 
-- Supported upload and download of third-party plugins.
-- Significantly improved download speed for Alibaba Cloud Drive.
-- More robust encryption and decryption solution.
+- Support upload and download of third-party plugins.
+- Significantly improved Aliyun Drive download speed.
+- More robust encryption and decryption scheme.
 
 ### 0.5.10 (2025-02-09)
 
-> Mandatory upgrade for Alibaba Cloud Drive users; upgrade recommended for users with encryption enabled.
+> Mandatory upgrade for Aliyun Drive users; encryption users recommended to upgrade.
 
-- Fix: Stability of Alibaba Cloud Drive.
-- Enhancement: Encryption and decryption logic.
+- Fixed: Aliyun Drive stability.
+- Improved: Encryption and decryption logic.
 
 ### 0.5.9 (2025-02-02)
 
 > Upgrade recommended.
 
-- Feature: Supported adaptive sync cycle.
-- Fix: Timestamp error in Baidu Cloud Drive.
+- Feature: Support adaptive sync interval.
+- Fixed: Baidu Netdisk timestamp error.
 
 ### 0.5.8 (2025-01-31)
 
 > Upgrade recommended.
 
-- Improved sync stability and performance for Alibaba Cloud Drive.
-- Supported file sync exclusion via regular expressions.
+- Improved Aliyun Drive sync stability and performance.
+- Support excluding file sync via regex.
 
 ### 0.5.7 (2025-01-29)
 
 > Optional upgrade.
 
-- Feature: Supported file revision history.
-- Feature: Added shortcut key support (Ctrl+Shift+H) to open file revision view.
+- Feature: Support file version history.
+- Feature: Added shortcut (Ctrl+Shift+H) to open version history view.
 
 ### 0.5.6 (2025-01-26)
 
 > Upgrade recommended.
 
-- Fix: Issue where remote files in empty folders were not displayed in controlled sync mode.
-- Fix: Adjusted request intervals for file downloads from Alibaba Cloud Drive to reduce 403 errors.
-- Feature: Added dynamic sync cycle adjustment mechanism in automatic mode.
+- Fixed: Remote files not displayed in empty folders under restricted sync mode.
 
-### 0.5.5 (2025-01-24)
-
-> Upgrade recommended.
-
-- Fix: File decryption issue in automatic mode.
-- Fix: Timestamp error causing upload failures for Alibaba Cloud Drive.
-
-### 0.5.4 (2025-01-23)
-
-> Optional upgrade.
-
-- Optimized sync performance detector.
-- Optimized API requests during file operations.
-
-### 0.5.3 (2025-01-21)
-
-> Upgrade recommended.
-
-- New feature: Supported OneDrive sync.
-- Optimized sync status view.
-- Fixed known issues.
-
-### 0.5.2 (2025-01-15)
-
-> Optional upgrade.
-
-- Reduced redundant "rename" API calls for cloud drives.
-- Fixed issue where folder status display might be incorrect for multi-level folders in controlled mode.
-
-### 0.5.1 (2025-01-14)
-
-> Upgrade recommended.
-
-- Added start/stop button in automatic sync view.
-- Supported password hiding and display in settings interface.
-
-### 0.5.0 (2025-01-13)
-
-> Upgrade recommended.
-
-- New sync mode: Automatic mode.
-- Optimized activation process, eliminating the need to copy plugins between devices.
-- Optimized controlled sync mode.
-
-### 0.4.6 (2024-12-25)
-
-> Optional upgrade.
-
-- Added more error logs to log mode.
-- New settings interface.
-
-### 0.4.5 (2024-12-22)
-
-> Optional upgrade.
-
-- Added more error records to log mode.
-- Optimized interface display.
-
-### 0.4.4 (2024-12-09)
-
-> Optional upgrade.
-
-- Feature: Added log mode.
-
-### 0.4.3 (2024-12-03)
-
-> Upgrade recommended.
-
-- Feature: Added one-click automatic upgrade.
-- Fixes: Optimized settings interface display, added upgrade and help bars; fixed authorization timeout message prompts.
-
-### 0.4.2 (2024-11-29)
-
-> Optional upgrade.
-
-- Multi-language support, currently supporting English, Simplified Chinese, and Traditional Chinese.
-
-### 0.4.1 (2024-11-27)
-
-> Upgrade recommended.
-
-- Fixed file search failure issue in Baidu Cloud Drive.
-- Clicking the "Check for Updates" button automatically checks for updates and prompts for download.
-
-### 0.4.0 (2024-11-15)
-
-> Upgrade recommended for Alibaba Cloud Drive users.
-
-- Supported Alibaba Cloud Drive.
-- Automatic refresh of application authorization.
-- Improved automatic upload experience: Modified files are automatically uploaded in non-encryption mode (default mode), and an encryption indicator is displayed when encryption mode is enabled.
-- Fix: Resolved issue where locally deleted files in version 0.3.4 were not synced to the cloud on some platforms.
-
-### 0.3.4 (2024-11-02)
-
-> Upgrade recommended for all users.
-
-- Fixed decryption process issues.
-- Expanded authorization process to support more cloud drives.
-
-### 0.3.3 (2024-10-29)
-
-> Upgrade recommended for all users.
-
-- Fixed status display issues during folder upload and download.
-- Fixed issue with syncing deleted files.
-- Optimized mobile interface.
-
-### 0.3.0 (2024-10-27)
-
-- Optimized interface.
-- Automatically uploaded modified synced files in encryption mode.
-
-### 0.2.0 (2024-10-26)
-
-- Optimized folder upload logic.
-- Optimized loading process.
-- Some bug fixes.
-
-### 0.1.1 (2024-10-23)
-
-- Fix: Recognition of new remote files in automatic download mode.
-
-### 0.1.0 (2024-10-22)
-
-- Supported Baidu Cloud Drive sync on Windows, macOS, and Linux.
-- Supported Baidu Cloud Drive sync on iOS, iPadOS, and Android.
-- Automatically detected file creation, deletion, modification, and movement.
-- Renamed: From Cloud Disk Explorer to Sync Vault.
-- Optimized UI display.
+</details>

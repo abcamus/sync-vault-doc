@@ -17,7 +17,7 @@ const config: QuartzConfig = {
       projectId: "t0rg7gvytf"
     },
     locale: "en-US",
-    baseUrl: "abcamus.github.io/sync-vault-doc",
+    baseUrl: "sync-vault.com/docs",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
@@ -78,6 +78,7 @@ const config: QuartzConfig = {
     filters: [Plugin.RemoveDrafts()],
     emitters: [
       Plugin.AliasRedirects(),
+      Plugin.RobotsTxt(),
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
       Plugin.FolderPage({

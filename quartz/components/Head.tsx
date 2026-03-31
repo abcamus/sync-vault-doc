@@ -36,6 +36,36 @@ export default (() => {
     )
     const ogImageDefaultPath = `https://${cfg.baseUrl}/static/og-image.png`
 
+    // Keywords
+    const keywords = fileData.frontmatter?.tags?.join(", ") ?? ""
+
+    // JSON-LD Structured Data
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      description: description,
+      image: ogImageDefaultPath,
+      author: {
+        "@type": "Person",
+        name: "Sync Vault Team", 
+      },
+      publisher: {
+        "@type": "Organization",
+        name: cfg.pageTitle,
+        logo: {
+          "@type": "ImageObject",
+          url: iconPath,
+        },
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": socialUrl,
+      },
+      datePublished: fileData.frontmatter?.date,
+      dateModified: fileData.frontmatter?.lastmod,
+    }
+
     return (
       <head>
         <title>{title}</title>
@@ -79,12 +109,16 @@ export default (() => {
             <meta property="twitter:domain" content={cfg.baseUrl}></meta>
             <meta property="og:url" content={socialUrl}></meta>
             <meta property="twitter:url" content={socialUrl}></meta>
+            <link rel="canonical" href={socialUrl} />
           </>
         )}
 
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
+        {keywords && <meta name="keywords" content={keywords} />}
+        <meta name="author" content="Sync Vault Team" />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
 
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js

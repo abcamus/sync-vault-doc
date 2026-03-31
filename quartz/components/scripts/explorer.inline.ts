@@ -176,6 +176,19 @@ async function setupExplorer(currentSlug: FullSlug) {
     const entries = [...Object.entries(data)] as [FullSlug, ContentDetails][]
     const trie = FileTrieNode.fromEntries(entries)
 
+    // Filter by language based on current slug
+    const isZh = currentSlug.startsWith("zh/") || currentSlug === "zh"
+    if (isZh) {
+      const zhNode = trie.children.find((child) => child.slugSegment === "zh")
+      if (zhNode) {
+        trie.children = zhNode.children
+      } else {
+        trie.children = []
+      }
+    } else {
+      trie.children = trie.children.filter((child) => child.slugSegment !== "zh")
+    }
+
     // Apply functions in order
     for (const fn of opts.order) {
       switch (fn) {
