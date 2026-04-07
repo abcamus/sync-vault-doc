@@ -20,7 +20,7 @@ date: 2025-10-15
 设置成功后的界面如下图所示：
 ![[setup-zh.webp]]
 
-> [!note] 点击 [这里](https://sync-vault.com/#pricing) 获取激活码
+> [!note] 点击 [这里](https://kqiu.top/#sv-pricing) 获取激活码
 
 ## 快速设置
 
@@ -119,9 +119,3 @@ Sync Vault 支持 Model Context Protocol (MCP)，允许 AI 工具直接与您的
 ```
 
 > [!done] 恭喜您，开启 Sync Vault 之旅吧！ 🍻
-      }
-  }
-}
-```
-
-> [!done] 恭喜，开始您的 Sync Vault 之旅吧！🍻

@@ -65,7 +65,7 @@ Obsidian Sync Vault 不仅仅是一个同步插件，它是您通往**无限云�
 
 ### 💎 升级到专业版
 
-> [!success] **[点击获取授权](https://kqiu.top/product/sync-vault/)** —— 每天不到 1 毛钱，解锁 AI 知识库能力。
+> [!success] **[点击获取授权](https://sync-vault.com/#pricing)** —— 每天不到 1 毛钱，解锁 AI 知识库能力。
 
 | 功能特性 | 免费版 | 专业版 (推荐) |
 | :--- | :--- | :--- |

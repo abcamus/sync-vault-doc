@@ -59,7 +59,7 @@ Sync Vault isn't just a "sync" tool; it's a **Cloud-Integrated File System**.
 > [!success] Start your journey!
 > 1. [Installation Guide](guides/getting-started.md)
 > 2. [Configure Your Cloud](cloud-services/index.md)
-> 3. [Get Your License](https://kqiu.top/product/sync-vault/)
+> 3. [Get Your License](https://sync-vault.com/#pricing)
 
 ---
 *Sync Vault: Infinite Cloud Storage, LAN-like Sync Speed.*
